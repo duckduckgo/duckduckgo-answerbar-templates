@@ -1,0 +1,35 @@
+<div class="tile  tile--c--n  tile--audio  tile--no-highlight">
+    <div class="tile__media">
+        {{#if image}}
+        <img class="tile__media__img" src="{{imageProxy image}}" />
+        {{else}}
+        <div class="tile__media__no-artwork ddgsi">♫</div>
+        {{/if}}
+        <div class="audio-controls">
+            <div class="audio-controls__progress">
+                <div class="audio-controls__progress-bg  full100">
+                    <span class="rotated-fill"></span>
+                    <span class="full-fill"></span>
+                </div>
+                <div class="audio-controls__progress-loading">
+                    <span class="rotated-fill"></span>
+                    <span class="full-fill"></span>
+                </div>
+                <div class="audio-controls__progress-playback">
+                    <span class="rotated-fill"></span>
+                    <span class="full-fill"></span>
+                </div>
+            </div>
+            <span class="audio-controls__action  ddgsi">►</span>
+            <span class="audio-controls__time"></span>
+        </div>
+    </div>
+    <div class="tile__body">
+        <h4 class="tile__title"><a href="{{url}}" title="{{title}}">{{ellipsis title 45}}</a></h4>
+        {{#if meta.options.footer}}
+            <div class="tile__footer">
+                {{{include meta.options.footer}}}
+            </div>
+        {{/if}}
+    </div>
+</div>

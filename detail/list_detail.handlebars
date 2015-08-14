@@ -1,0 +1,37 @@
+<div class="cw">
+  <div class="zci__main  c-list">
+    <div class="zci__body">
+        {{#if title}}
+          <h3 class="c-list__title">{{title}}</h3>
+        {{/if}}
+        {{#if subtitle}}
+          <p class="c-list__sub">{{{formatSubtitle subtitle}}}</p>
+        {{/if}}
+        {{#if meta.options.subtitle_content}}
+          {{{include meta.options.subtitle_content}}}
+        {{/if}}
+  
+        {{#if meta.options.content}}
+            <div class="c-list__content  chomp  js-chomp">{{{include meta.options.content}}}</div>
+        {{/if}}
+        {{#if meta.options.list_content}}
+            <div class="c-list__content  chomp  js-chomp">
+                <ul class="c-list__items">{{#each list}}
+                    <li class="c-list__item">{{{include ../meta.options.list_content}}}</li>
+                {{/each}}</ul>
+            </div>
+        {{/if}}
+      
+        <div class="c-list__links">
+            {{{include 'chomp_link' className="c-list__link" sep=meta.options.moreAt}}}
+            {{#if meta.options.moreAt}}
+                {{{moreAt meta 'none' className="c-list__link"}}}
+            {{/if}}
+            {{#if meta.options.moreText}}
+                <span class="c-list__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
+            {{/if}}
+        </div>
+    </div>
+  </div>
+</div>
+

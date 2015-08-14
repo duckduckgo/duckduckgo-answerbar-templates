@@ -1,0 +1,15 @@
+{{#if meta.sourceName}}
+    <a class="mapview-marker__popup" href="{{url}}" title="DDG.Text.MORE_AT {{meta.sourceName}}">{{ellipsis name 31}} <span class="mapview-marker__arrow">▶</span></a>
+{{else}}
+    <span class="mapview-marker__popup">
+        {{#if name}}
+            <span class="mapview-marker__popup__name">{{name}}</span>
+        {{/if}}
+        {{#if address}}
+            <span class="mapview-marker__popup__address">{{address}}</span>
+        {{/if}}
+        {{#if displayLatLon}}
+            <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
+        {{/if}}
+    </span>
+{{/if}}

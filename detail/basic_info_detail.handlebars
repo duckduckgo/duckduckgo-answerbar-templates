@@ -1,0 +1,38 @@
+<div class="c-info--cw  cw {{#if infoboxData}}has-aux{{/if}}">
+  <div class="zci__main  c-info">
+    <div class="zci__body">
+    {{#if image}}
+        <div class="c-info__img-wrap  c-info__img-wrap--{{#if imageTile}}tile{{else}}clip{{/if}}">
+           <a href="{{{url}}}" class="c-info__img-wrap__in"><img class="c-info__img  js-detail-img" src="{{{imageProxy image}}}" /></a>
+        </div>
+    {{/if}}
+        <div class="c-info__body">
+            {{#if title}}
+                <h1 class="c-info__title  {{#if subtitle}}has-sub{{/if}}"><a href="{{{url}}}">{{title}}</a>
+                    {{#if subtitle}}<span class="c-info__title__sub">{{{formatSubtitle subtitle}}}</span>{{/if}}
+                </h1>
+            {{/if}}
+            {{#if meta.options.content}}
+                <div class="c-info__content {{#if meta.options.chompContent}}chomp js-ellipsis{{/if}}">
+                    {{{include meta.options.content}}}
+                </div>
+            {{else}}
+                {{#if description}}
+                    <div class="c-info__content chomp js-ellipsis">
+                        {{description}}
+                    </div>
+                {{/if}}
+            {{/if}}
+            <div class="c-info__links">
+            {{{include 'chomp_link' className="c-info__link  c-info__link--chomp" sep=meta.options.moreAt}}}
+            {{#if meta.options.moreAt}}
+                {{{moreAt meta 'none' className="c-info__link" sourceOnlyMobile='true'}}}
+            {{/if}}
+            {{#if meta.options.moreText}}
+                <span class="c-info__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
+            {{/if}}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="c-info--cw  cw {{#if data.[1]}}has-aux{{/if}}">
+    <div class="zci__main  c-info">
+        <div class="zci__body  c-info__body">
+            {{{lyricsTitle title url}}}
+            <div class="c-info__content  chomp js-ellipsis">
+                {{{lyricsAbstract abstract}}}
+            </div>
+            <div class="c-info__links">
+                {{{include 'chomp_link' className="c-info__link  c-info__link--chomp  sep--after"}}}
+                {{{moreAt url source className="c-info__link"}}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if data.[1].urlTitle}}
+    {{{include 'infobox'}}}
+{{/if}}

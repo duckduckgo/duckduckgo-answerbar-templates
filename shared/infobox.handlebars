@@ -1,0 +1,43 @@
+<div class="zci__aux">
+    <div class="tile  tile--info  js-infobox-tile">
+        {{#each data}}
+            {{#if heading}}
+                <h6 class="info  info--head">{{heading}}</h6>
+            {{/if}}
+            {{#if url}}
+                <div class="info  one-line">
+                    {{#if label}}
+                          <a class="tile--info__link" href="{{makeRelative url}}">
+                             <span class="info__label">{{label}}</span>
+                             <span class="info__value">{{#if value.content}}
+                                   {{#each value.content}}
+                                           <span class="info__value__nested"><span class="info__value__nested__label">{{label}}:</span> {{value}}</span>
+                                   {{/each}}
+                                   {{else}}
+                                        {{value}}
+                                   {{/if}}</span>
+                          </a>
+                    {{else}}
+                        <a class="tile--info__link" href="{{makeRelative url}}">
+                           {{{urlTitle}}}
+                        </a>
+                    {{/if}} 
+                </div>
+            {{else}}
+                {{#if label}}
+                      <div class="info">
+                           <span class="info__label">{{label}}</span>
+                           <span class="info__value">{{#if value.content}}
+                                 {{#each value.content}}
+                                         <span class="info__value__nested"><span class="info__value__nested__label">{{label}}:</span> {{value}}</span>
+                                 {{/each}}
+                                 {{else}}
+                                         {{value}}
+                           {{/if}}</span>
+                      </div>
+                {{/if}}
+            {{/if}}
+        {{/each}}
+        <div class="tile__expand  tile--info__expand  is-hidden  js-tile-expand"></div>
+    </div>
+</div>

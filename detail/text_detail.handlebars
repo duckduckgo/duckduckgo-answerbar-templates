@@ -1,0 +1,43 @@
+<div class="cw {{#if infoboxData}}has-aux{{/if}}">
+  <div class="zci__main  c-base">
+    <div class="zci__body">
+      {{#if image}}
+        <div class="c-base__img-wrap"><img class="c-base__img" src="{{imageProxy image}}"></div>
+      {{/if}}
+      {{#if meta.options.title_content}}
+        {{{include meta.options.title_content}}}
+      {{else}}
+        {{#if title}}
+          <h3 class="c-base__title">{{title}}</h3>
+        {{/if}}
+      {{/if}}
+      {{#if meta.options.subtitle_content}}
+        {{{include meta.options.subtitle_content}}}
+      {{/if}}
+      {{#if subtitle}}
+        <h4 class="c-base__sub">{{{formatSubtitle subtitle}}}</h4>
+      {{/if}}
+  
+      {{#if meta.options.content}}
+        <div class="c-base__content {{#if meta.options.chompContent}}chomp js-ellipsis{{/if}}">{{{include meta.options.content}}}</div>
+      {{else}}
+          {{#if description}}
+            <div class="c-base__content {{#if meta.options.chompContent}}chomp js-ellipsis{{/if}}">
+                {{description}}
+            </div>
+          {{/if}}
+      {{/if}}
+      <div class="c-base__links">
+        {{#if meta.options.chompContent}}
+            {{{include 'chomp_link' className="c-base__link" sep=meta.options.moreAt}}}
+        {{/if}}
+        {{#if meta.options.moreAt}}
+            {{{moreAt meta 'none' className="c-base__link"}}}
+        {{/if}}
+        {{#if meta.options.moreText}}
+            <span class="c-base__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
+        {{/if}}
+      </div>
+  </div>
+</div>
+

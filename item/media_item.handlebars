@@ -1,0 +1,19 @@
+<div class="tile {{#unless meta.elClass.tile}} tile--c {{else}} {{meta.elClass.tile}} {{/unless}} tile--{{meta.id}}" {{#if url}}data-link="{{url}}"{{/if}}>
+    <div class="tile__media {{meta.elClass.tileMedia}}">
+        <img src="{{imageProxy image}}" alt="{{title}}" class="tile__media__img" />
+    </div>
+    <div class="tile__body {{#if meta.options.footer}}has-foot{{/if}} {{meta.elClass.tileBody}}">
+        {{{include 'tile_titles'}}}
+        {{#if description}}
+            {{{include 'tile_snippet'}}}
+        {{/if}}
+        {{#if meta.options.footer}}
+            <div class="tile__foot {{meta.elClass.tileFoot}}">
+                {{{include meta.options.footer}}}
+            </div>
+        {{/if}}
+        {{#if dateBadge}}
+            {{{include 'date_badge'}}}
+        {{/if}}
+    </div>
+</div>

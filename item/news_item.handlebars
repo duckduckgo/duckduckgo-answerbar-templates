@@ -1,0 +1,14 @@
+<div class="tile  tile--c  tile--news" data-link="{{url}}">
+	<div class="tile__body  has-foot  js-news-body">
+		<h3 class="tile__title  tile__title--4  tile__title--min  js-news-title"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
+		<div class="tile__content  tile__content--news  js-ellipsis" data-outer-height=".js-news-body" data-subtract-height-of=".js-news-title">{{{excerpt}}}</div>
+	</div>
+	<div class="tile__foot  tile__foot--news">
+		<span class="news-more-at">
+			{{{favicon url lazy="1" className="tile__favicon"}}}
+			<span class="news-source">{{source}}</span>
+		</span>
+		<span class="sep  tile__sep"></span>
+		<span class="tile__time">{{{relative_time}}}</span>
+	</div>
+</div>

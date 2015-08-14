@@ -1,0 +1,15 @@
+<div class="cw">
+  <div class="zci__main  zci__main--detail  c-base">
+      <div class="zci__body">{{#if content}}{{{content}}}{{else}}{{{include meta.options.content}}}{{/if}}
+        <div class="c-base__links">
+          {{#if meta.options.moreAt}}
+              {{{moreAt meta 'none' className="c-base__link"}}}
+          {{/if}}
+          {{#if meta.options.moreText}}
+              <span class="c-base__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
+          {{/if}}
+        </div>
+    </div>
+  </div>
+</div>
+

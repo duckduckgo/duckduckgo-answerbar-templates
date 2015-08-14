@@ -1,0 +1,53 @@
+<div class="c-product">
+    <div class="c-product__pane">
+        {{#if img}}
+          <div class="c-product__media {{meta.elClass.productMedia}}">
+              <img class="c-product__media__img {{meta.elClass.productMediaImg}}" src="{{imageProxy img}}" />
+          </div>
+        {{/if}}
+        <div class="c-product__body-wrap">
+            <div class="c-product__body-content">
+                <div class="c-product__body  c-product__body--pri  r-border-box">
+                    {{{formatTitle heading el="h5" className="c-product__title" classNameSec=meta.elClass.productTitle noSub="true" ellipsis=120 href=url}}}
+                    <p class="c-product__subtitle  {{meta.elClass.productSub}}">
+                    {{#if meta.options.subtitle_content}}
+                        {{{include meta.options.subtitle_content}}}
+                    {{else}}
+                      {{subtitle}}
+                      {{#if meta.options.rating}}
+                        <span class="c-product__rating {{#if subtitle}}sep--before{{/if}}">{{{starsAndReviews rating reviewCount url}}}</span>
+                      {{/if}}
+                      {{#and meta.options.price meta.options.rating price}}
+                        <span class="sep  c-product__sep"></span>
+                      {{/and}}
+                      {{#and meta.options.price price}}
+                        <span class="c-product__price  price  tx-clr--dk2">{{price}}</span>
+                      {{/and}}
+                      {{#and meta.options.price meta.options.brand price brand}}
+                        <span class="sep  c-product__sep"></span>
+                      {{/and}}
+                      {{#and meta.options.rating meta.options.brand brand}}
+                        <span class="sep  c-product__sep"></span>
+                      {{/and}}
+                      {{#and meta.options.brand brand}}
+                        <span class="c-product__brand">DDG.Text.MADE_BY_BRAND</span>
+                      {{/and}}
+                    {{/if}}
+                    </p>
+                </div>
+                <div class="c-product__body  c-product__body--sec">
+                    <div class="c-product__desc {{meta.elClass.productDesc}}">
+                      {{#if meta.options.description_content}}
+                        {{{include meta.options.description_content}}}
+                      {{else}}
+                        {{{ellipsis abstract 400}}}
+                      {{/if}}
+                    </div>
+                    {{#if meta.options.buy}}
+                      <div class="c-product__callout {{meta.elClass.productCallout}}">{{{include meta.options.buy}}}</div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="tile  tile--c  js-tile--{{firstLetter Text}}" data-link="{{FirstURL}}">
+	<div class="tile__body">
+		{{#if Icon.URL }}
+			<img class="tile__icon" src="{{Icon.URL}}" />
+		{{/if}}
+		{{{formatTitle Result el="h4" className="tile__title" parseFirst="true"}}}
+		<div class="tile__content  tile__content--sm">{{{ellipsis Result 95 parseFirst="true"}}}</div> {{! Text duplicates the title, using Result }}
+	</div>
+</div>

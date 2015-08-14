@@ -1,0 +1,8 @@
+<{{tagName}} class="{{className}} {{classNameSec}} {{#if subTitle}}has-sub{{/if}}">
+    {{#if href}}<a href="{{href}}" {{#if hrefTitle}}title="{{hrefTitle}}"{{/if}}>{{/if}}
+    {{{title}}}
+    {{#if href}}</a>{{/if}}
+    {{#if subTitle}}
+        <span class="{{className}}__sub {{#if optSub}}opt{{/if}}">{{{subTitle}}}</span>
+    {{/if}}
+</{{tagName}}>

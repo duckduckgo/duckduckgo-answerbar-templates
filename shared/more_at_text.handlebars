@@ -1,0 +1,7 @@
+{{#unless sourceLogo}}
+    {{sourceName}}
+{{else}}
+    {{#with sourceLogo}}
+        <img class="zci__more-at__logo" src="{{url}}" width="{{width}}" height="{{height}}" />
+    {{/with}}
+{{/unless}}

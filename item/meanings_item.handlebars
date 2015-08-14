@@ -1,0 +1,12 @@
+<div class="tile  tile--c  {{#if topic}}js-tile--{{trim topic.id}}{{/if}}" {{#if topic}}data-anchor="{{trim topic.id}}"{{/if}} data-link="{{FirstURL}}">
+    <div class="tile__body">
+        {{#if Icon.URL }}
+            <img class="tile__icon  js-lazyload" src="" data-src="{{Icon.URL}}" />
+        {{else}}
+            <span class="media__img--rev" {{#if topic}}data-type="{{trim topic.id}}"{{/if}}></span>
+        {{/if}}
+        {{{formatTitle Result el="h4" className="tile__title" parseFirst="true"}}}
+        <div class="tile__content  tile__content--sm">{{{ellipsis Result 95 parseFirst="true"}}}</div> {{! Text duplicates the title, using Result }}
+    </div>
+</div>
+

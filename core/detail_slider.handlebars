@@ -1,0 +1,11 @@
+<div class="detail  detail--slider  detail--{{id}}  is-hidden" {{#if detailHeight}}style="height:{{detailHeight}};"{{/if}}>
+    <div class="detail__wrap">
+        <i class="detail__close  js-detail-close"></i>
+        {{#if mobileAndNoTouch}}
+            <i class="tile-nav tile-nav--d tile-nav--prev js-detail-prev"></i>
+            <i class="tile-nav tile-nav--d tile-nav--next js-detail-next"></i>
+        {{/if}}
+        <div class="detail__panes  js-detail-panes"></div>
+        <div class="detail__controls"><i class="tile-nav--sm  tile-nav--sm--prev  js-detail-prev"></i><i class="tile-nav--sm  tile-nav--sm--next  js-detail-next"></i></div>
+    </div>
+</div>

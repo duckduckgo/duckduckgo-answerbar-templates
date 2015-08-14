@@ -1,0 +1,50 @@
+<div class="cw {{#if infoboxData}}has-aux{{/if}}">
+  <div class="zci__main  c-icon">
+    <div class="zci__body">
+        <div class="c-icon__head">
+        {{#if image}}
+            <div class="c-icon__img-wrap {{meta.elClass.iconImage}}">
+                <img class="c-icon__img" src="{{{imageProxy image}}}" />
+            </div>
+        {{/if}}
+        {{#if badge}}
+            <span class="c-icon__badge {{meta.elClass.iconBadge}} {{meta.elClass.bgColor}}">{{badge}}</span>
+        {{/if}}
+            <div class="c-icon__body">
+            {{#if title}}
+                <h1 class="c-icon__title {{meta.elClass.iconTitle}}"><a href="{{{url}}}">{{title}}</a></h1>
+            {{/if}}
+            {{#if subtitle}}
+                <span class="c-icon__sub {{meta.elClass.iconSubtitle}}">
+                    {{{formatSubtitle subtitle}}}
+                </span>
+            {{/if}}
+            {{#if altSubtitle}}
+                <span class="c-icon__sub {{meta.elClass.iconAltSubtitle}}">
+                    {{{formatSubtitle altSubtitle}}}
+                </span>
+            {{/if}}
+            </div>
+        </div>
+        {{#if meta.options.content}}
+            <div class="c-icon__content {{meta.elClass.iconContent}}">
+                {{{include meta.options.content}}}
+            </div>
+        {{else}}
+            {{#if description}}
+                <div class="c-icon__content {{meta.elClass.iconContent}}">
+                    {{description}}
+                </div>
+            {{/if}}
+        {{/if}}
+        {{#if meta.options.moreAt}}
+            <div class="c-icon__links {{meta.elClass.iconLinks}}">
+                {{{moreAt meta 'none' className="c-icon__link"}}}
+                {{#if meta.options.moreText}}
+                    <span class="c-icon__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
+  </div>
+</div>

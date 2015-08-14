@@ -1,0 +1,28 @@
+<div class="c-info--cw  cw {{#if infoboxData}}has-aux{{/if}}">
+    <div class="zci__main  c-info">
+        <div class="zci__body">
+        {{#if Image}}
+            <div class="c-info__img-wrap  c-info__img-wrap--{{#if imageTile}}tile{{else}}clip{{/if}}">
+                <a href="{{{AbstractURL}}}" class="c-info__img-wrap__in"><img class="c-info__img  js-sized-img" src="{{{Image}}}" {{#if imageLoadingSize}}style="width:{{imageLoadingSize.width}}px;height:{{imageLoadingSize.height}}px;" {{/if}} /></a>
+            </div>
+        {{/if}}
+            <div class="c-info__body">
+            {{#if Heading}}
+                {{{formatTitle Heading el="h1" className="c-info__title" href=AbstractURL }}}
+            {{/if}}
+                <div class="c-info__content chomp js-ellipsis">
+                    {{{Abstract}}}
+                </div>
+                <div class="c-info__links">
+                {{{include 'chomp_link' className="c-info__link  c-info__link--chomp" sep=meta}}}
+                {{#if meta}}
+                    {{{moreAt meta AbstractURL className="c-info__link" sourceOnlyMobile=true}}}
+                {{/if}}
+                {{#each Results to="0"}}
+                    <a class="c-info__link  c-info__link--url" href="{{FirstURL}}"><span class="sep  c-info__links__sep"></span>{{domain FirstURL}}</a>
+                {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

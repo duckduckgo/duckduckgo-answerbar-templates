@@ -1,0 +1,10 @@
+{{#each components}}
+    {{#if @index}}
+        <span class="sep"></span>
+    {{/if}}
+    {{#if href}}
+    <a href="{{href}}"{{#if className}} class="{{className}}"{{/if}}>{{text}}</a>
+    {{else}}
+        {{.}}
+    {{/if}}
+{{/each}}
