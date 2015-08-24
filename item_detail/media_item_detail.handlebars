@@ -5,19 +5,19 @@
         </div>
     {{/if}}
     <div class="detail__body {{meta.elClass.detailBody}}">
-        <div class="detail__body__content">
-            <h5 class="detail__title {{meta.elClass.detailTitle}}">
+        <div class="c-detail detail__body__content">
+            <h5 class="c-detail__title {{meta.elClass.detailTitle}}">
                 {{title}}
-                {{#if altSubtitle}}<span class="detail__title__sub {{meta.elClass.detailAltSubtitle}}">{{{formatSubtitle altSubtitle}}}</span>{{/if}}
+                {{#if altSubtitle}}<span class="c-detail__title__sub {{meta.elClass.detailAltSubtitle}}">{{{formatSubtitle altSubtitle}}}</span>{{/if}}
             </h5>
-            {{#if subtitle}}<span class="detail__subtitle {{meta.elClass.detailSubtitle}}">{{{formatSubtitle subtitle}}}</span>{{/if}}
+            {{#if subtitle}}<span class="c-detail__subtitle {{meta.elClass.detailSubtitle}}">{{{formatSubtitle subtitle}}}</span>{{/if}}
             {{#if description}}
-            <div class="detail__desc {{meta.elClass.detailSnippet}}">
+            <div class="c-detail__desc {{meta.elClass.detailSnippet}}">
                 {{ellipsis description meta.snippetChars fallback=155}}
             </div>
             {{/if}}
             {{#if meta.options.callout}}
-            <div class="detail__callout {{meta.elClass.detailFoot}}">
+            <div class="c-detail__callout {{meta.elClass.detailFoot}}">
                 {{{include meta.options.callout}}}
             </div>
             {{/if}}
