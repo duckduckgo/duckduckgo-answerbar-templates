@@ -1,0 +1,15 @@
+<div class="dsp-mob">
+    <div class="dsp-mob__media  dsp-mob__media--{{meta.id}}  js-detail-media {{meta.elClass.detailMedia}}">
+        {{#if media_content}}
+            {{{media_content}}}
+        {{else}}
+            {{#if image}}
+                <img class="dsp-mob__media__img {{meta.elClass.detailImg}}" src="{{imageProxy image}}" alt="{{imageAlt}}" />
+            {{/if}}
+        {{/if}}
+    </div>
+    <div class="dsp-mob__body  dsp-mob__body--{{meta.id}}  {{meta.elClass.detailBody}}">
+        <div class="dsp-mob__body__content">{{{content}}}</div>
+    </div>
+</div>
+
