@@ -34,6 +34,7 @@
                 item: 'products_item',
                 detail: 'products_detail',
                 item_detail: 'products_item_detail',
+                item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
                     rating: true,
@@ -45,6 +46,7 @@
                 item: 'basic_image_item',
                 detail: 'products_detail',
                 item_detail: 'products_item_detail',
+                item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
@@ -57,6 +59,7 @@
                 item: 'basic_image_item',
                 detail: 'products_detail',
                 item_detail: 'products_item_detail',
+                item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
