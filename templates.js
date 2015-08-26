@@ -46,7 +46,6 @@
                 item: 'basic_image_item',
                 detail: 'products_detail',
                 item_detail: 'products_item_detail',
-                item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
@@ -59,7 +58,6 @@
                 item: 'basic_image_item',
                 detail: 'products_detail',
                 item_detail: 'products_item_detail',
-                item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
@@ -98,11 +96,13 @@
             },
             images: {
                 item: 'images_item',
-                detail: 'images_detail'
+                item_detail: 'images_detail',
+                item_detail_media: 'images_detail_media'
             },
             videos: {
                 item: 'videos_item',
-                detail: 'videos_detail'
+                item_detail: 'videos_detail',
+                item_detail_media: 'videos_detail_media'
             }
         },
         
