@@ -37,6 +37,7 @@
                 item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
+                    detailMediaWidth: 470,
                     rating: true,
                     price: true,
                     brand: true
@@ -51,7 +52,8 @@
                     price: false,
                     brand: false,
                     rating: false,
-                    ratingText: true
+                    ratingText: true,
+                    detailMediaWidth: 400
                 }
             },
             movies: {
@@ -63,7 +65,8 @@
                     price: false,
                     brand: false,
                     rating: false,
-                    ratingText: true
+                    ratingText: true,
+                    detailMediaWidth: 185
                 },
                 variants: {
                     tile: 'poster'
@@ -77,6 +80,7 @@
                 detail: 'basic_info_detail',
                 item_detail: 'media_item_detail',
                 options: {
+                    detailMediaWidth: 450,
                     moreAt: true,
                     aux: false
                 }
