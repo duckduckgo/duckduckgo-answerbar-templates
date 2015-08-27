@@ -100,7 +100,10 @@
             images: {
                 item: 'images_item',
                 item_detail: 'images_detail',
-                item_detail_media: 'images_detail_media'
+                item_detail_media: 'images_detail_media',
+                options: {
+                    noDetailLandscape: true
+                }
             },
             videos: {
                 item: 'videos_item',
