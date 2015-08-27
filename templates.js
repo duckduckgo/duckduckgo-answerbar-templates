@@ -38,7 +38,6 @@
                 wrap_detail: 'base_detail',
                 options: {
                     detailMediaOverlay: true,
-                    detailMediaWidth: 470,
                     rating: true,
                     price: true,
                     brand: true
@@ -81,7 +80,6 @@
                 detail: 'basic_info_detail',
                 item_detail: 'media_item_detail',
                 options: {
-                    detailMediaWidth: 450,
                     moreAt: true,
                     aux: false
                 }
