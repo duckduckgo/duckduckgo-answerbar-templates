@@ -9,7 +9,10 @@
         {{/if}}
     </div>
     <div class="dsp-mob__body  dsp-mob__body--{{meta.id}}  {{meta.elClass.detailBody}}">
-        <div class="dsp-mob__body__content">{{{content}}}</div>
+        <div class="dsp-mob__body__content">
+            {{#and url meta.options.mobileMore}}<a href="{{url}}" class="dsp-mob__more disc disc--s {{meta.elClass.bgColor}}"></a>{{/and}}
+            {{{content}}}
+        </div>
     </div>
 </div>
 
