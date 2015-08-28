@@ -105,13 +105,17 @@
                 item_detail: 'images_detail',
                 item_detail_media: 'images_detail_media',
                 options: {
+                    detailDark: true,
                     noDetailLandscape: true
                 }
             },
             videos: {
                 item: 'videos_item',
                 item_detail: 'videos_detail',
-                item_detail_media: 'videos_detail_media'
+                item_detail_media: 'videos_detail_media',
+                options: {
+                    detailDark: true
+                }
             }
         },
         
