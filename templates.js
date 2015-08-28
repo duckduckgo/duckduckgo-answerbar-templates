@@ -66,10 +66,13 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
+                    mobileMore: true,
+                    detailDark: true,
                     detailMediaWidth: 185
                 },
                 variants: {
-                    tile: 'poster'
+                    tile: 'poster',
+                    bgColor: 'blue'
                 },
                 elClass: {
                     tileBody: 'is-hidden'
