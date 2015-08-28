@@ -3,7 +3,17 @@
 		<span class="metabar__mode-wrap"><a class="btn--icon  metabar__mode  js-metabar-mode  is-disabled">{{initialModeIcon}}</a></span>
 		{{#if showMoreAt}}
 			<div class="metabar__more-at">
-				{{{moreAt this 'none'}}}
+            {{#if sources}}
+                <div class="frm__select">
+                    <select class="js-metabar-sources">
+                    {{#each sources}}
+                        <option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}}</option>
+                    {{/each}}
+                    </select>
+                </div>
+            {{else}}
+                {{{moreAt this 'none'}}}
+            {{/if}}
 			</div> 
 		{{/if}}
 		{{#if secondaryText}}
