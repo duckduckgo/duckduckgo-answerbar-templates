@@ -67,10 +67,13 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
+                    mobileMore: true,
+                    detailDark: true,
                     detailMediaWidth: 185
                 },
                 variants: {
-                    tile: 'poster'
+                    tile: 'poster',
+                    bgColor: 'blue'
                 },
                 elClass: {
                     tileBody: 'is-hidden'
@@ -103,13 +106,17 @@
                 item_detail: 'images_detail',
                 item_detail_media: 'images_detail_media',
                 options: {
+                    detailDark: true,
                     noDetailLandscape: true
                 }
             },
             videos: {
                 item: 'videos_item',
                 item_detail: 'videos_detail',
-                item_detail_media: 'videos_detail_media'
+                item_detail_media: 'videos_detail_media',
+                options: {
+                    detailDark: true
+                }
             }
         },
         
