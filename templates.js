@@ -37,7 +37,6 @@
                 item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
-                    detailMediaOverlay: true,
                     rating: true,
                     price: true,
                     brand: true
