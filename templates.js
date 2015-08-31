@@ -39,7 +39,8 @@
                 options: {
                     rating: true,
                     price: true,
-                    brand: true
+                    brand: true,
+                    hideReviewText: false
                 }
             },
             products_simple: {

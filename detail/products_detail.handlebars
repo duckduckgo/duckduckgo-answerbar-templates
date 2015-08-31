@@ -15,7 +15,7 @@
                     {{else}}
                       {{subtitle}}
                       {{#if meta.options.rating}}
-                        <span class="c-product__rating {{#if subtitle}}sep--before{{/if}}">{{{starsAndReviews rating reviewCount url}}}</span>
+                        <span class="c-product__rating {{#if subtitle}}sep--before{{/if}}">{{{starsAndReviews rating reviewCount url meta.options.hideReviewText}}}</span>
                       {{/if}}
                       {{#and meta.options.price meta.options.rating price}}
                         <span class="sep  c-product__sep"></span>
