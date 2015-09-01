@@ -20,7 +20,7 @@
 			<div class="metabar__parameters">
 			{{#each parameters}}
 				<div class="frm__select">
-					<select class="js-metabar-{{id}}">
+					<select data-id="{{id}}" class="js-metabar-{{id}}">
 					{{#each options}}
 						<option value="{{option}}" {{#if selected}}selected{{/if}}>{{description}}</option>
 					{{/each}}
