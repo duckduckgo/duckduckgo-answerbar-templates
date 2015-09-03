@@ -1,7 +1,16 @@
 <div class="tile  tile--c  tile--news" data-link="{{url}}">
+    {{#if fetch_image}}
+        <div class="tile__media">
+            {{#if image}}
+                <img class="tile__media__img" src="{{imageProxy image}}" />
+            {{/if}}
+        </div>
+    {{/if}}
 	<div class="tile__body  has-foot  js-news-body">
-		<h3 class="tile__title  tile__title--4  tile__title--min  js-news-title"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
-		<div class="tile__content  tile__content--news  js-ellipsis" data-outer-height=".js-news-body" data-subtract-height-of=".js-news-title">{{{excerpt}}}</div>
+		<h3 class="tile__title  tile__title--{{#if fetch_image}}3{{else}}4{{/if}}  tile__title--min  js-news-title"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
+        {{^if fetch_image}}
+		    <div class="tile__content  tile__content--news  js-ellipsis" data-outer-height=".js-news-body" data-subtract-height-of=".js-news-title">{{{excerpt}}}</div>
+        {{/if}}
 	</div>
 	<div class="tile__foot  tile__foot--news">
 		<span class="news-more-at">
