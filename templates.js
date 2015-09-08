@@ -40,7 +40,8 @@
                     rating: true,
                     price: true,
                     brand: true,
-                    hideReviewText: false
+                    hideReviewText: false,
+                    mobileDetailBodyHeight: 140
                 }
             },
             products_simple: {
@@ -68,11 +69,12 @@
                     ratingText: true,
                     mobileMore: true,
                     detailDark: true,
-                    detailMediaWidth: 185
+                    detailMediaWidth: 185,
+                    mobileDetailBodyHeight: 80
                 },
                 variants: {
                     tile: 'poster',
-                    bgColor: 'blue'
+                    mobileMore: 'primary'
                 },
                 elClass: {
                     tileBody: 'is-hidden'
@@ -136,8 +138,13 @@
                 green: 'bg-clr--green',
                 gold: 'bg-clr--gold'
             },
+            mobileMore: {
+                primary: 'bg-clr--blue-light',
+                critical: 'bg-clr--red-light'
+            },
             detail: {
-                light: "detail--l"
+                light: "detail--l",
+                dark: "detail--xd"
             },
             tile: {
                 narrow: "tile--c--n",
