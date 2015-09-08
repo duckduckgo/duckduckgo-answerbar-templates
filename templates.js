@@ -41,7 +41,7 @@
                     price: true,
                     brand: true,
                     hideReviewText: false,
-                    mobileDetailBodyHeight: 140
+                    mobileDetailBodyHeight: 150
                 }
             },
             products_simple: {
