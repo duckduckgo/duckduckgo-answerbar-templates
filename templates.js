@@ -41,7 +41,7 @@
                     price: true,
                     brand: true,
                     hideReviewText: false,
-                    mobileDetailBodyHeight: 150
+                    detailMediaShape: 'square'
                 }
             },
             products_simple: {
@@ -54,7 +54,7 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    detailMediaWidth: 400
+                    detailMediaShape: 'square'
                 }
             },
             movies: {
@@ -70,7 +70,7 @@
                     mobileMore: true,
                     detailDark: true,
                     detailMediaWidth: 185,
-                    mobileDetailBodyHeight: 80
+                    detailMediaShape: 'tall'
                 },
                 variants: {
                     tile: 'poster',
@@ -85,6 +85,7 @@
                 detail: 'basic_info_detail',
                 item_detail: 'media_item_detail',
                 options: {
+                    detailMediaShape: 'short',
                     moreAt: true,
                     aux: false
                 }
