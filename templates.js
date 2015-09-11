@@ -113,6 +113,9 @@
                 options: {
                     detailDark: true,
                     noDetailLandscape: true
+                },
+                variants: {
+                    detail: "simple"
                 }
             },
             videos: {
@@ -121,6 +124,9 @@
                 item_detail_media: 'videos_detail_media',
                 options: {
                     detailDark: true
+                },
+                variants: {
+                    detail: "simple"
                 }
             }
         },
@@ -150,6 +156,7 @@
                 secondary: 'btn--secondary'
             },
             detail: {
+                simple: "detail--simple",
                 light: "detail--l",
                 dark: "detail--xd"
             },
