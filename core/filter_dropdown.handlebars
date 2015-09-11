@@ -1,7 +1,7 @@
 <div class="frm__select">
-    <select class="js-metabar-{{key}}">
+    <select class="js-metabar-{{key}}" {{#if !enabled}}disabled{{/if}}>
     {{#each values}}
-        <option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}}</option>
+        <option value="{{id}}" {{#if selected}}selected{{/if}} {{#if !enabled}}disabled{{/if}}>{{name}}</option>
     {{/each}}
     </select>
 </div>
