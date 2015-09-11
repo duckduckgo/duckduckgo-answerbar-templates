@@ -10,7 +10,7 @@
     </div>
     <div class="dsp-mob__body  js-detail-body  dsp-mob__body--{{meta.id}} {{meta.elClass.detailBody}} {{#if meta.options.detailMediaShape}}is-dynamic{{/if}}">
         <div class="dsp-mob__body__content">
-            {{#and url meta.options.mobileMore}}<a href="{{url}}" class="dsp-mob__more disc btn {{meta.elClass.button}}"></a>{{/and}}
+            {{#and url meta.options.mobileMore}}<a href="{{url}}" class="dsp-mob__more disc btn {{meta.elClass.button}} js-detail-more"></a>{{/and}}
             {{{content}}}
         </div>
     </div>
