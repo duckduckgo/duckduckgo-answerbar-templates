@@ -42,6 +42,9 @@
                     brand: true,
                     hideReviewText: false,
                     detailMediaShape: 'square'
+                },
+                variants: {
+                    button: 'primary'
                 }
             },
             products_simple: {
@@ -74,7 +77,7 @@
                 },
                 variants: {
                     tile: 'poster',
-                    mobileMore: 'primary'
+                    button: 'primary'
                 },
                 elClass: {
                     tileBody: 'is-hidden'
@@ -139,9 +142,12 @@
                 green: 'bg-clr--green',
                 gold: 'bg-clr--gold'
             },
-            mobileMore: {
-                primary: 'bg-clr--blue-light',
-                critical: 'bg-clr--red-light'
+            button: {
+                alt: 'btn--alt',
+                critical: 'btn--critical',
+                primary: 'btn--primary',
+                primaryAlt: 'btn--primary--alt',
+                secondary: 'btn--secondary'
             },
             detail: {
                 light: "detail--l",
