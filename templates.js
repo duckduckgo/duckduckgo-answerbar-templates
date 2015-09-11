@@ -40,8 +40,7 @@
                     rating: true,
                     price: true,
                     brand: true,
-                    hideReviewText: false,
-                    detailMediaShape: 'square'
+                    hideReviewText: false
                 },
                 variants: {
                     button: 'primary'
