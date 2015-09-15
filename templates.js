@@ -56,7 +56,7 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    detailMediaShape: 'small'
+                    detailMediaShape: 'short'
                 }
             },
             movies: {
