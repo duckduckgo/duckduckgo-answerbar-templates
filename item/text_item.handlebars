@@ -1,4 +1,4 @@
-<div class="tile {{#unless meta.elClass.tile}} tile--c {{else}} {{meta.elClass.tile}} {{/unless}} tile--{{meta.id}}" {{#if url}}data-link="{{url}}"{{/if}}>
+<div class="tile {{#if elClass}}{{elClass}}{{else}}{{#if meta.elClass.tile}}{{meta.elClass.tile}}{{else}}tile--c{{/if}}{{/if}} tile--{{meta.id}}" {{#if url}}data-link="{{url}}"{{/if}}>
     <div class="tile__body {{#if meta.options.footer}}has-foot{{/if}} {{meta.elClass.tileBody}}">
         {{{include 'tile_titles'}}}
         <div class="tile__content {{meta.elClass.tileSnippet}}">
