@@ -56,7 +56,7 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    detailMediaShape: 'square'
+                    detailMediaShape: 'small'
                 }
             },
             movies: {
@@ -69,10 +69,8 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    mobileMore: true,
                     detailDark: true,
-                    detailMediaWidth: 185,
-                    detailMediaShape: 'tall'
+                    detailMediaWidth: 185
                 },
                 variants: {
                     tile: 'poster',
