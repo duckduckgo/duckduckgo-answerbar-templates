@@ -1,4 +1,4 @@
-<div class="tile  tile--f  tile--{{meta.id}}  {{meta.elClass.tile}}">
+<div class="tile  tile--f  tile--{{meta.id}}  {{#if elClass}}{{elClass}}{{else}}{{meta.elClass.tile}}{{/if}}">
 	<div class="tile--f__main {{meta.elClass.tileFront}}">
 		{{#with data_front}}
 			{{{include 'tile_body' meta=../meta num=../num}}}
