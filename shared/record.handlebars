@@ -2,7 +2,7 @@
     <table class="record__body">
         {{#table-each this}}
             <tr class="record__row  {{#if ../meta.options.rowHighlight}}record__row--highlight{{/if}}">
-                <td class="record__cell  record__cell--key">{{key}}:</td>
+                <td class="record__cell  record__cell--key">{{key}}</td>
                 <td class="record__cell  record__cell--value">{{ellipsis value 350}}</td>
             </tr>
         {{/table-each}}
