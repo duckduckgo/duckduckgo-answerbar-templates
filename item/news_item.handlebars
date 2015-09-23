@@ -6,9 +6,9 @@
         </div>
     {{/if}}
 	<div class="tile__body  has-foot">
-		<h3 class="tile__title  {{#if fetch_image}}tile__title--3{{else}}tile__title--4{{/if}}  tile__title--min"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
+		<h3 class="tile__title  {{#if fetch_image}}tile__title--under-image{{/if}}  js-ellipsis"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
         {{^if fetch_image}}
-		    <div class="tile__content  tile__content--news">{{{excerpt}}}</div>
+		    <div class="tile__content  tile__content--news  js-ellipsis">{{{excerpt}}}</div>
         {{/if}}
 	</div>
 	<div class="tile__foot  tile__foot--news">
