@@ -1,19 +1,19 @@
-<div class="overlay  overlay--video-privacy">
+<div class="overlay  overlay--geo-privacy">
     <div class="overlay__wrap">
         <div class="overlay__content">
-            <div class="overlay--video-privacy__icon"></div>
-            <h3 class="overlay__title  detail__media__privacy__header">DDG.Text.GEOLOCATION_PRIVACY</h3>
-            <p class="overlay__text  overlay--video-privacy__text">DDG.Text.GEOLOCATION_PRIVACY_DESC</p>
+            <div class="overlay--geo-privacy__icon"></div>
+            <h3 class="overlay__title">DDG.Text.GEOLOCATION_PRIVACY</h3>
+            <p class="overlay__text  overlay--geo-privacy__text">DDG.Text.GEOLOCATION_PRIVACY_DESC</p>
             <ul class="overlay__btn-list">
                 <li class="overlay__btn-list__li">
-                    <a class="btn  btn--wire  overlay__btn  js-video-privacy-watch" href="#" title=\"DDG.Text.PRECISE_LOCATION">DDG.Text.PRECISE_LOCATION</a>
+                    <a class="btn  btn--wire  overlay__btn  js-geo-privacy-precise" href="#" title=\"DDG.Text.PRECISE_LOCATION">DDG.Text.PRECISE_LOCATION</a>
                 </li>
                 <li class="overlay__btn-list__li">
-                    <a class="btn  btn--wire  overlay__btn  js-video-privacy-leave" href="#" title=\"DDG.Text.GENERIC_LOCATION">DDG.Text.GENERIC_LOCATION</a>
+                    <a class="btn  btn--wire  overlay__btn  js-geo-privacy-generic" href="#" title=\"DDG.Text.GENERIC_LOCATION">DDG.Text.GENERIC_LOCATION</a>
                 </li>
             </ul>
-            <label class="overlay--video-privacy__remember  js-video-privacy-remember-label">
-                <input type="checkbox" class="js-video-privacy-remember" type="checkbox" checked="checked" />
+            <label class="overlay--geo-privacy__remember">
+                <input type="checkbox" class="js-geo-privacy-remember" type="checkbox" checked="checked" />
                 DDG.Text.REMEMBER_SETTING
             </label>
         </div>
