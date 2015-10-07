@@ -1,8 +1,12 @@
 <div class="metabar__dropdown {{#if disabled}}metabar__dropdown--disabled{{/if}} metabar__dropdown--{{key}}">
     <a href="#" class="metabar__dropdown__selected js-dropdown-selected">{{values.0.name}}</a>
-    <div class="metabar__dropdown__item-wrap js-dropdown-item-wrap is-hidden">
-    {{#each values}}
-        <a href="#" data-value="{{id}}" class="metabar__dropdown__item {{#if disabled}}metabar__dropdown__item--disabled{{/if}} js-dropdown-items">{{name}}</a>
-    {{/each}}
+    <div class="metabar__dropdown__popout-wrap popout-wrap popout-wrap--bottom">
+        <div class="metabar__dropdown__popout popout js-dropdown-popout popout--bottom">
+            <div class="popout__body">
+            {{#each values}}
+                <a href="#" data-value="{{id}}" class="metabar__dropdown__item {{#if disabled}}metabar__dropdown__item--disabled{{/if}} js-dropdown-items">{{name}}</a>
+            {{/each}}
+            </div>
+        </div>
     </div>
 </div>
