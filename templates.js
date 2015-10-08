@@ -63,6 +63,7 @@
                 item: 'basic_image_item',
                 detail: 'products_detail',
                 item_detail: 'products_item_detail',
+                item_detail_media: 'detail_pane_media_spacer',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
@@ -70,7 +71,8 @@
                     rating: false,
                     ratingText: true,
                     detailDark: true,
-                    detailMediaWidth: 185
+                    detailMediaWidth: 185,
+                    detailMediaShape: 'square'
                 },
                 variants: {
                     tile: 'poster',
