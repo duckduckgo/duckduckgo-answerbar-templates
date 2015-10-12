@@ -4,7 +4,7 @@
         <div class="metabar__dropdown__popout popout js-dropdown-popout popout--bottom">
             <div class="popout__body">
             {{#each values}}
-                <a href="#" data-value="{{id}}" class="metabar__dropdown__item {{#if disabled}}metabar__dropdown__item--disabled{{/if}} js-dropdown-items">{{name}}</a>
+                <a href="#" data-value="{{id}}" class="metabar__dropdown__item {{#if disabled}}metabar__dropdown__item--disabled{{/if}} {{#if selected}}metabar__dropdown__item--selected{{/if}} js-dropdown-items">{{name}}</a>
             {{/each}}
             </div>
         </div>
