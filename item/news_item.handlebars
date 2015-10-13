@@ -1,12 +1,20 @@
 <div class="tile  tile--c  tile--news" data-link="{{url}}">
-	<div class="tile__body  has-foot  js-news-body">
-		<h3 class="tile__title  tile__title--4  tile__title--min  js-news-title"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
-		<div class="tile__content  tile__content--news  js-ellipsis" data-outer-height=".js-news-body" data-subtract-height-of=".js-news-title">{{{excerpt}}}</div>
+    {{#if fetch_image}}
+        <div class="tile__media">
+            <div class="tile__media__plc ddgsi ddgsi-news"></div>
+            {{#if image}}<div class="tile__media__img" style="background-image:url({{imageProxy image}});"></div>{{/if}}
+        </div>
+    {{/if}}
+	<div class="tile__body  has-foot">
+		<h3 class="tile__title  {{#if fetch_image}}tile__title--under-image{{/if}}  js-ellipsis"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
+        {{^if fetch_image}}
+		    <div class="tile__content  tile__content--news  js-ellipsis">{{{excerpt}}}</div>
+        {{/if}}
 	</div>
 	<div class="tile__foot  tile__foot--news">
 		<span class="news-more-at">
 			{{{favicon url lazy="1" className="tile__favicon"}}}
-			<span class="news-source">{{source}}</span>
+			<span class="news-source">{{ellipsis source 20}}</span>
 		</span>
 		<span class="sep  tile__sep"></span>
 		<span class="tile__time">{{{relative_time}}}</span>
