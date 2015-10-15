@@ -15,5 +15,8 @@
 		{{else}}
 			<div class="metabar__primary-text js-metabar-primary {{^if count}}is-loading{{/if}}">{{{showingHTML}}}</div>
 		{{/if}}
+        {{#if showDropdowns}}
+            <div class="metabar__dropdowns js-metabar-dropdowns sep--before {{^if count}}is-loading{{/if}}"></div>
+        {{/if}}
 	</div>
 </div>
