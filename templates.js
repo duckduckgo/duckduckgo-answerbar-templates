@@ -122,7 +122,8 @@
                 item_detail: 'videos_detail',
                 item_detail_media: 'videos_detail_media',
                 options: {
-                    detailDark: true
+                    detailDark: true,
+                    noDetailLandscape: true
                 },
                 variants: {
                     detail: "simple"
