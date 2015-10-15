@@ -1,5 +1,5 @@
 <div class="c-detail">
-    {{{formatTitle heading href=url el="h5" className="c-detail__title" ellipsis=120 }}}
+    {{{formatTitle heading href=url el="h5" className="c-detail__title" ellipsis=160 }}}
     <p class="c-detail__subtitle">
         {{#and meta.options.price price}}
             <span class="c-detail__price  price  tx-clr--dk2">{{price}}</span>
@@ -19,7 +19,7 @@
             {{{starsAndReviews rating reviewCount url_review meta.options.hideReviewText}}}
         </p>
     {{/if}}
-    <p class="c-detail__desc  hide--dsp-mob  hide--dsp-lan">
+    <p class="c-detail__desc  hide--dsp-lan">
         {{{abstract}}}
     </p>
     {{#if meta.options.buy}}
