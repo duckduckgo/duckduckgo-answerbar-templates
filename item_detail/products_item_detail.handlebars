@@ -1,6 +1,6 @@
 <div class="c-detail">
     {{{formatTitle heading href=url el="h5" className="c-detail__title" ellipsis=160 }}}
-    <p class="c-detail__subtitle">
+    <div class="c-detail__subtitle">
         {{#and meta.options.price price}}
             <span class="c-detail__price  price  tx-clr--dk2">{{price}}</span>
         {{/and}}
@@ -13,15 +13,15 @@
         {{#if meta.options.subtitle_content}}
             {{{include meta.options.subtitle_content}}}
         {{/if}}
-    </p>
+    </div>
     {{#if meta.options.rating}}
-        <p class="c-detail__rating">
+        <div class="c-detail__rating">
             {{{starsAndReviews rating reviewCount url_review meta.options.hideReviewText}}}
-        </p>
+        </div>
     {{/if}}
-    <p class="c-detail__desc  hide--dsp-lan">
+    <div class="c-detail__desc  hide--dsp-lan">
         {{{abstract}}}
-    </p>
+    </div>
     {{#if meta.options.buy}}
         <div class="c-detail__callout">
             {{{include meta.options.buy}}}
