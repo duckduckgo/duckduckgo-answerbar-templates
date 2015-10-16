@@ -22,7 +22,11 @@
         </div>
     {{/if}}
     <div class="c-detail__desc {{#if meta.options.hideDescMobile}}hide--mob{{/if} {{#if meta.options.hideDescLandscape}}hide--dsp-lan{{/if}}">
-        {{{abstract}}}
+        {{#if meta.options.abstract_content}}
+            {{{include meta.options.abstract_content}}}
+        {{else}}
+            {{{abstract}}}
+        {{/if}}
     </div>
     {{#if meta.options.buy}}
         <div class="c-detail__callout">
