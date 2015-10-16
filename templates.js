@@ -40,7 +40,8 @@
                     rating: true,
                     price: true,
                     brand: true,
-                    hideReviewText: false
+                    hideReviewText: false,
+                    hideDescLandscape: true
                 },
                 variants: {
                     button: 'primary'
@@ -72,7 +73,8 @@
                     ratingText: true,
                     detailDark: true,
                     detailMediaWidth: 185,
-                    detailMediaShape: 'square'
+                    detailMediaShape: 'square',
+                    hideDescLandscape: true
                 },
                 variants: {
                     tile: 'poster',

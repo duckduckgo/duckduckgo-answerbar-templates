@@ -21,7 +21,7 @@
             {{{starsAndReviews rating reviewCount url_review meta.options.hideReviewText}}}
         </div>
     {{/if}}
-    <div class="c-detail__desc  hide--dsp-lan">
+    <div class="c-detail__desc {{#if meta.options.hideDescMobile}}hide--mob{{/if} {{#if meta.options.hideDescLandscape}}hide--dsp-lan{{/if}}">
         {{{abstract}}}
     </div>
     {{#if meta.options.buy}}
