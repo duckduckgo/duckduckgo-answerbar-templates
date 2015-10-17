@@ -6,7 +6,7 @@
                 <ol class="popout__list">
                 {{#each values}}
                     <li>
-                        <a href="#" data-value="{{id}}" class="popout__list-link metabar__dropdown__item {{#if disabled}}metabar__dropdown__item--disabled{{/if}} {{#if selected}}metabar__dropdown__item--selected{{/if}} js-dropdown-items">{{name}}</a>
+                        <a href="#" data-value="{{id}}" class="popout__list-link metabar__dropdown__item {{#if disabled}}is-disabled{{/if}} {{#if selected}}is-selected{{/if}} js-dropdown-items">{{name}}</a>
                     </li>
                 {{/each}}
                 </ol>
