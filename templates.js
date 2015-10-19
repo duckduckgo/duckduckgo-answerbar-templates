@@ -63,7 +63,7 @@
             movies: {
                 item: 'basic_image_item',
                 detail: 'products_detail',
-                item_detail: 'products_item_detail',
+                item_detail: 'media_item_detail',
                 item_detail_media: 'detail_pane_media_spacer',
                 wrap_detail: 'base_detail',
                 options: {

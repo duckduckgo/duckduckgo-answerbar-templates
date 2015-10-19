@@ -10,10 +10,12 @@
         {{#and meta.options.brand brand}}
             <span class="c-detail__brand">DDG.Text.MADE_BY_BRAND</span>
         {{/and}}
-        {{#if meta.options.subtitle_content}}
-            {{{include meta.options.subtitle_content}}}
-        {{else}}
-            {{subtitle}}
+        {{#if subtitle}}
+            {{#if meta.options.subtitle_content}}
+                {{{include meta.options.subtitle_content}}}
+            {{else}}
+                {{formatSubtitle subtitle}}
+            {{/if}}
         {{/if}}
     </div>
     {{#if meta.options.rating}}
@@ -22,11 +24,7 @@
         </div>
     {{/if}}
     <div class="c-detail__desc {{#if meta.options.hideDescMobile}}hide--mob{{/if}} {{#if meta.options.hideDescLandscape}}hide--dsp-lan{{/if}}">
-        {{#if meta.options.abstract_content}}
-            {{{include meta.options.abstract_content}}}
-        {{else}}
-            {{{abstract}}}
-        {{/if}}
+        {{{abstract}}}
     </div>
     {{#if meta.options.buy}}
         <div class="c-detail__callout">
