@@ -5,8 +5,8 @@
     </h5>
     {{#if subtitle}}
         <span class="c-detail__subtitle {{meta.elClass.detailSubtitle}}">
-            {{#if subtitle_content}}
-                {{include meta.options.subtitle_content}}
+            {{#if meta.options.subtitle_content}}
+                {{{include meta.options.subtitle_content}}}
             {{else}}
                 {{{formatSubtitle subtitle}}}
             {{/if}}
@@ -14,8 +14,8 @@
     {{/if}}
     {{#if description}}
         <div class="c-detail__desc {{meta.elClass.detailSnippet}}  {{#if meta.options.hideDescMobile}}hide--mob{{/if}} {{#if meta.options.hideDescLandscape}}hide--dsp-lan{{/if}}">
-            {{#if description_content}}
-                {{include meta.options.description_content}}
+            {{#if meta.options.description_content}}
+                {{{include meta.options.description_content}}}
             {{else}}
                 {{ellipsis description meta.snippetChars fallback=155}}
             {{/if}}
