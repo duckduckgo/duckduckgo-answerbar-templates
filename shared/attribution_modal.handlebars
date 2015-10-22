@@ -1,18 +1,21 @@
-<div class="popout-wrap  popout-wrap--{{direction}}">
-    <div class="popout  popout--{{direction}}  popout--lg">
-        <div class="popout__body">
-            <div class="attribution">
-                <p class="tx-clr--slate">DDG.Text.ATTRIBUTION_STRING</p>
-                <hr class="attribution__hr"/>
-                {{#if devs}}
-                    {{#each devs}}
-                        <div class="tx-clr--slate-light">DDG.Text.ATTRIBUTION_DEV: <b class="tx-clr--slate">{{this.name}}</b></div>
-                    {{/each}}
+<div class="modal  modal--popout  modal--popout--{{direction}}  modal--popout--lg">
+    <div class="modal__overlay js-modal-close"></div>
+    <div class="modal__wrap">
+        <div class="modal__box">
+            <div class="modal__body">
+                <div class="attribution">
+                    <p class="tx-clr--slate">DDG.Text.ATTRIBUTION_STRING</p>
                     <hr class="attribution__hr"/>
-                {{/if}}
-                <div class="gw">
-                    <div class="g whole">
-                        <a href="https://duck.co/ia/view/{{meta.signal_from}}" class="btn btn--full attribution__btn">DDG.Text.MORE_INFO</a>
+                    {{#if devs}}
+                        {{#each devs}}
+                            <div class="tx-clr--slate-light">DDG.Text.ATTRIBUTION_DEV: <b class="tx-clr--slate">{{this.name}}</b></div>
+                        {{/each}}
+                        <hr class="attribution__hr"/>
+                    {{/if}}
+                    <div class="gw">
+                        <div class="g whole">
+                            <a href="https://duck.co/ia/view/{{meta.signal_from}}" class="btn btn--full attribution__btn">DDG.Text.MORE_INFO</a>
+                        </div>
                     </div>
                 </div>
             </div>
