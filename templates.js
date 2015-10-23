@@ -41,7 +41,8 @@
                     price: true,
                     brand: true,
                     hideReviewText: false,
-                    hideDescLandscape: true
+                    hideDescLandscape: true,
+                    detailMediaShape: 'square'
                 },
                 variants: {
                     button: 'primary'
@@ -57,7 +58,7 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    detailMediaShape: 'short'
+                    detailMediaShape: '4x3'
                 }
             },
             movies: {
@@ -89,7 +90,7 @@
                 detail: 'basic_info_detail',
                 item_detail: 'media_item_detail',
                 options: {
-                    detailMediaShape: 'short',
+                    detailMediaShape: '4x3',
                     moreAt: true,
                     aux: false
                 }
