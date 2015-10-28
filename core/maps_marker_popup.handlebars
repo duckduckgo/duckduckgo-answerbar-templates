@@ -2,7 +2,7 @@
     <a class="mapview-marker__popup" href="{{url}}" title="DDG.Text.MORE_AT {{meta.sourceName}}">{{ellipsis name 31}} <span class="mapview-marker__arrow">▶</span></a>
 {{else}}
     <span class="mapview-marker__popup">
-        {{#if name}}
+    {{#if name}}
             <span class="mapview-marker__popup__name">{{name}}</span>
         {{/if}}
         {{#if address}}
@@ -10,6 +10,13 @@
         {{/if}}
         {{#if displayLatLon}}
             <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
+        {{/if}}
+        {{#if url}}
+            <a class="btn" href="{{url}}">Website</a>
+            {{/if}}
+        {{#if address}}
+            <a class="btn" href="https://bing.com/maps/?obox=1&q={{address}}">Directions</a>
+        <!-- <a class="btn" href="https://www.here.com/?x=ep&map={{address}}">Directions</a> -->
         {{/if}}
     </span>
 {{/if}}
