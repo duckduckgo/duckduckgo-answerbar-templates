@@ -13,7 +13,7 @@
 		{{#if primaryText}}
 			<div class="metabar__primary-text">{{{primaryText}}}</div>
 		{{else}}
-			<div class="metabar__primary-text js-metabar-primary {{^if count}}is-loading{{/if}}">{{{showingHTML}}}</div>
+			<div class="metabar__primary-text js-metabar-primary {{^if count}}is-loading{{/if}}"><span class="metabar__item-type">{{l itemType}}</span> DDG.Text.FOR <span class="metabar__term">{{searchTerm}}</span></div>
 		{{/if}}
         {{#if showDropdowns}}
             <div class="metabar__dropdowns js-metabar-dropdowns sep--before {{^if count}}is-loading{{/if}}"></div>
