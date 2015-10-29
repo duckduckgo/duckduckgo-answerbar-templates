@@ -57,6 +57,9 @@
                     {{#if phone}}
                         <a class="tile__sub  tile--map__main__bottom" href="tel:{{phone}}">{{phone}}</a>
                     {{/if}}
+                    {{#if address}}
+                        <a href="https://bing.com/maps/?obox=1&q={{address}}">Directions </a>
+                    {{/if}}
                 </div>
                 {{#if hours}}
                     <div class="tile__hours">
