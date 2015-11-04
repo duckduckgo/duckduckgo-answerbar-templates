@@ -11,7 +11,7 @@
 		{{/if}}
 		<div class="metabar__attribution  js-attribution  hide--screen-s  is-hidden">{{#if showMoreAt}}<span class="metabar__attribution__sep sep"></span>{{else}}{{#if secondaryText}}<span class="metabar__attribution__sep sep"></span>{{/if}}{{/if}}</div>
 		{{#if primaryText}}
-			<div class="metabar__primary-text">{{{primaryText}}}</div>
+			<div class="metabar__primary-text {{primaryTextClass}}">{{{primaryText}}}</div>
 		{{else}}
 			<div class="metabar__primary-text js-metabar-primary {{^if count}}is-loading{{/if}}"><span class="metabar__item-type">{{l itemType}}</span> DDG.Text.FOR <span class="metabar__term">{{searchTerm}}</span></div>
 		{{/if}}
