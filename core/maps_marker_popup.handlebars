@@ -15,8 +15,21 @@
             <a class="btn" href="{{url}}">Website</a>
             {{/if}}
         {{#if address}}
-            <a class="btn" href="https://bing.com/maps/?obox=1&q={{address}}">Directions</a>
-        <!-- <a class="btn" href="https://www.here.com/?x=ep&map={{address}}">Directions</a> -->
+            <a href="https://bing.com/maps/?obox=1&q={{address}}" value="{{address}}" id="dir_upstream">Directions on</a>
+            <div class="frm__select--maps">
+            <select class="js-set-input" id="directions_source">
+                <option value="https://bing.com/maps/?obox=1&q=">Bing</option>
+                <option value="https://www.here.com/directions/drive//">HERE</option>
+                <option value="https://www.google.com/maps/dir//">Google</option>
+            </select>
+                </div>
+            <script>$('#directions_source').on('change',function(){
+                    var tmp_addr = $('#dir_upstream').attr('value');
+                var upstream_root = $(this).val();
+                    var new_address = upstream_root + tmp_addr;
+                        console.log("test");
+                $('#dir_upstream').attr('href', new_address);
+            });</script>
         {{/if}}
     </span>
 {{/if}}
