@@ -10,7 +10,7 @@
 			<div class="metabar__secondary-text  hide--screen-s">{{{secondaryText}}}{{#if showMoreAt}}<span class="sep"></span>{{/if}}</div>
 		{{/if}}
 		<div class="metabar__attribution  js-attribution  hide--screen-s  is-hidden">{{#if showMoreAt}}<span class="metabar__attribution__sep sep"></span>{{else}}{{#if secondaryText}}<span class="metabar__attribution__sep sep"></span>{{/if}}{{/if}}</div>
-        <div class="metabar__primary-text js-metabar-primary {{^if count}}is-loading{{/if}}">
+        <div class="metabar__primary-text js-metabar-primary is-loading">
             {{#if primaryText}}
                 {{{primaryText}}}
             {{else}}
@@ -18,7 +18,7 @@
             {{/if}}
         </div>
         {{#if showDropdowns}}
-            <div class="metabar__dropdowns js-metabar-dropdowns {{^if count}}is-loading{{/if}}"></div>
+            <div class="metabar__dropdowns js-metabar-dropdowns is-loading"></div>
         {{/if}}
 	</div>
 </div>
