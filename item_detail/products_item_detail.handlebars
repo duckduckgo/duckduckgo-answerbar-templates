@@ -1,6 +1,6 @@
 <div class="c-detail">
-    {{{formatTitle heading href=url el="h5" className="c-detail__title" ellipsis=120 }}}
-    <p class="c-detail__subtitle">
+    {{{formatTitle heading href=url el="h5" className="c-detail__title" ellipsis=160 }}}
+    <div class="c-detail__subtitle">
         {{#and meta.options.price price}}
             <span class="c-detail__price  price  tx-clr--dk2">{{price}}</span>
         {{/and}}
@@ -10,18 +10,22 @@
         {{#and meta.options.brand brand}}
             <span class="c-detail__brand">DDG.Text.MADE_BY_BRAND</span>
         {{/and}}
-        {{#if meta.options.subtitle_content}}
-            {{{include meta.options.subtitle_content}}}
+        {{#if subtitle}}
+            {{#if meta.options.subtitle_content}}
+                {{{include meta.options.subtitle_content}}}
+            {{else}}
+                {{formatSubtitle subtitle}}
+            {{/if}}
         {{/if}}
-    </p>
+    </div>
     {{#if meta.options.rating}}
-        <p class="c-detail__rating">
+        <div class="c-detail__rating">
             {{{starsAndReviews rating reviewCount url_review meta.options.hideReviewText}}}
-        </p>
+        </div>
     {{/if}}
-    <p class="c-detail__desc  hide--dsp-mob  hide--dsp-lan">
+    <div class="c-detail__desc {{#if meta.options.hideDescMobile}}hide--mob{{/if}} {{#if meta.options.hideDescLandscape}}hide--dsp-lan{{/if}}">
         {{{abstract}}}
-    </p>
+    </div>
     {{#if meta.options.buy}}
         <div class="c-detail__callout">
             {{{include meta.options.buy}}}

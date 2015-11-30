@@ -40,7 +40,9 @@
                     rating: true,
                     price: true,
                     brand: true,
-                    hideReviewText: false
+                    hideReviewText: false,
+                    hideDescLandscape: true,
+                    detailMediaShape: 'square'
                 },
                 variants: {
                     button: 'primary'
@@ -56,13 +58,13 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    detailMediaShape: 'short'
+                    detailMediaShape: '4x3'
                 }
             },
             movies: {
                 item: 'basic_image_item',
                 detail: 'products_detail',
-                item_detail: 'products_item_detail',
+                item_detail: 'media_item_detail',
                 item_detail_media: 'detail_pane_media_spacer',
                 wrap_detail: 'base_detail',
                 options: {
@@ -72,7 +74,8 @@
                     ratingText: true,
                     detailDark: true,
                     detailMediaWidth: 185,
-                    detailMediaShape: 'square'
+                    detailMediaShape: 'square',
+                    hideDescLandscape: true
                 },
                 variants: {
                     tile: 'poster',
@@ -87,7 +90,7 @@
                 detail: 'basic_info_detail',
                 item_detail: 'media_item_detail',
                 options: {
-                    detailMediaShape: 'short',
+                    detailMediaShape: '4x3',
                     moreAt: true,
                     aux: false
                 }
@@ -122,7 +125,8 @@
                 item_detail: 'videos_detail',
                 item_detail_media: 'videos_detail_media',
                 options: {
-                    detailDark: true
+                    detailDark: true,
+                    noDetailLandscape: true
                 },
                 variants: {
                     detail: "simple"

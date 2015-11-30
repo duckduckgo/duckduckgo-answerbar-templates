@@ -3,15 +3,27 @@
         {{title}}
         {{#if altSubtitle}}<span class="c-detail__title__sub {{meta.elClass.detailAltSubtitle}}">{{{formatSubtitle altSubtitle}}}</span>{{/if}}
     </h5>
-    {{#if subtitle}}<span class="c-detail__subtitle {{meta.elClass.detailSubtitle}}">{{{formatSubtitle subtitle}}}</span>{{/if}}
+    {{#if subtitle}}
+        <span class="c-detail__subtitle {{meta.elClass.detailSubtitle}}">
+            {{#if meta.options.subtitle_content}}
+                {{{include meta.options.subtitle_content}}}
+            {{else}}
+                {{{formatSubtitle subtitle}}}
+            {{/if}}
+        </span>
+    {{/if}}
     {{#if description}}
-    <div class="c-detail__desc {{meta.elClass.detailSnippet}}">
-        {{ellipsis description meta.snippetChars fallback=155}}
-    </div>
+        <div class="c-detail__desc {{meta.elClass.detailSnippet}}  {{#if meta.options.hideDescMobile}}hide--mob{{/if}} {{#if meta.options.hideDescLandscape}}hide--dsp-lan{{/if}}">
+            {{#if meta.options.description_content}}
+                {{{include meta.options.description_content}}}
+            {{else}}
+                {{ellipsis description meta.snippetChars fallback=155}}
+            {{/if}}
+        </div>
     {{/if}}
     {{#if meta.options.callout}}
-    <div class="c-detail__callout {{meta.elClass.detailFoot}}">
-        {{{include meta.options.callout}}}
-    </div>
+        <div class="c-detail__callout {{meta.elClass.detailFoot}}">
+            {{{include meta.options.callout}}}
+        </div>
     {{/if}}
 </div>
