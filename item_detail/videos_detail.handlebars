@@ -1,31 +1,29 @@
 <div class="c-detail  hide--dsp-lan">
     <h5 class="c-detail__title"><a href='{{url}}' title="{{title}}">{{title}}</a></h5>
     <div class="c-detail__desc">
-        <p class="c-detail__user  hide--dsp-mob"><i class="c-detail__icon  c-detail__user__icon">u</i> <a href='{{userURL}}'>{{{username}}}</a></p>
+        {{#if username}}
+            <p class="c-detail__user  hide--dsp-mob"><i class="c-detail__icon  c-detail__user__icon">u</i> <a href='{{userURL}}'>{{{username}}}</a></p>
+        {{/if}}
         <p class="c-detail__count  inline--dsp-mob"><i class="c-detail__icon  c-detail__count__icon  hide--dsp-mob">i</i> {{{viewCount}}}</p>
         <span class="sep c-detail__sep hide--dsp-lg"></span>
         <p class="c-detail__date  inline--dsp-mob"><i class="c-detail__icon  c-detail__date__icon  hide--dsp-mob">&uArr;</i> {{{publishedDate}}}</p>
     </div>    
-        {{#if musicVideo}}
-            <h6 class="c-detail__links--title">DDG.Text.GET_THIS_SONG_ON</h6>
-            <p class="c-detail__links">
-              <a href='/?q={{musicVideo.spotifyURL}}' class='btn c-detail__links__btn'>
+    {{#if musicVideo}}
+        <h6 class="c-detail__links--title">DDG.Text.GET_THIS_SONG_ON</h6>
+        <p class="c-detail__links">
+            <a href='/?q={{musicVideo.spotifyURL}}' class='btn c-detail__links__btn'>
                 {{{favicon "spotify" className="btn__icon" w="auto" h="auto"}}}
                 Spotify
-              </a>
-              
-              <a href='/?q={{musicVideo.amazonURL}}' class='btn c-detail__links__btn'>
+            </a>
+            <a href='/?q={{musicVideo.amazonURL}}' class='btn c-detail__links__btn'>
                 {{{favicon "amazon" className="btn__icon" w="auto" h="auto"}}}
                 Amazon  
-              </a>
-                  
-              <a style="display: none;" href='' id="video-detail-itunes" class='btn c-detail__links__btn' data-title='{{musicVideo.title}}' data-artist='{{musicVideo.artist}}' data-song='{{musicVideo.song}}'>
+            </a>
+            <a style="display: none;" href='' id="video-detail-itunes" class='btn c-detail__links__btn' data-title='{{musicVideo.title}}' data-artist='{{musicVideo.artist}}' data-song='{{musicVideo.song}}'>
                 {{{favicon "apple" className="btn__icon" w="auto" h="auto"}}}
                 iTunes  
-              </a>
-            </p>
-        {{/if}}
-        
-        <p class="c-detail__more  hide--dsp-mob">{{{moreAt searchURL provider className=" " iconClassName="c-detail__icon" iconUrl=faviconURL}}}</p>
-    
+            </a>
+        </p>
+    {{/if}}
+    <p class="c-detail__more  hide--dsp-mob">{{{moreAt searchURL provider className=" " iconClassName="c-detail__icon" iconUrl=faviconURL}}}</p>
 </div>

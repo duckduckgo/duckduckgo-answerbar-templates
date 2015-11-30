@@ -1,4 +1,4 @@
-<div class="metabar  metabar--fixed  js-zcm-sticky {{#if hidden}}is-hidden{{/if}}">
+<div class="metabar  metabar--fixed  js-zcm-sticky {{#if showDropdowns}}has-dropdowns{{/if}} {{#if hidden}}is-hidden{{/if}}">
 	<div class="metabar__in  js-metabar">
 		<span class="metabar__mode-wrap"><a class="btn--icon  metabar__mode  js-metabar-mode  is-disabled">{{initialModeIcon}}</a></span>
 		{{#if showMoreAt}}
@@ -10,10 +10,15 @@
 			<div class="metabar__secondary-text  hide--screen-s">{{{secondaryText}}}{{#if showMoreAt}}<span class="sep"></span>{{/if}}</div>
 		{{/if}}
 		<div class="metabar__attribution  js-attribution  hide--screen-s  is-hidden">{{#if showMoreAt}}<span class="metabar__attribution__sep sep"></span>{{else}}{{#if secondaryText}}<span class="metabar__attribution__sep sep"></span>{{/if}}{{/if}}</div>
-		{{#if primaryText}}
-			<div class="metabar__primary-text">{{{primaryText}}}</div>
-		{{else}}
-			<div class="metabar__primary-text js-metabar-primary {{^if count}}is-loading{{/if}}">{{{showingHTML}}}</div>
-		{{/if}}
+        <div class="metabar__primary-text js-metabar-primary is-loading">
+            {{#if primaryText}}
+                {{{primaryText}}}
+            {{else}}
+                <span class="metabar__item-type">{{l itemType}}</span> DDG.Text.FOR <span class="metabar__term">{{searchTerm}}</span>
+            {{/if}}
+        </div>
+        {{#if showDropdowns}}
+            <div class="metabar__dropdowns js-metabar-dropdowns is-loading"></div>
+        {{/if}}
 	</div>
 </div>
