@@ -1,6 +1,16 @@
 !function(env) {
     
     env.Data.templates = {
+
+        defaultOptions: {
+            price: true,
+            brand: true,
+            rating: true,
+            ratingText: true,
+            moreAt: true,
+            content: false
+        },
+
         groups: {
             // base: a container
             base: {
@@ -114,7 +124,8 @@
                 item_detail_media: 'images_detail_media',
                 options: {
                     detailDark: true,
-                    noDetailLandscape: true
+                    noDetailLandscape: true,
+                    detailPane: 'ImageDetailPane'
                 },
                 variants: {
                     detail: "simple"
@@ -126,7 +137,8 @@
                 item_detail_media: 'videos_detail_media',
                 options: {
                     detailDark: true,
-                    noDetailLandscape: true
+                    noDetailLandscape: true,
+                    detailPane: 'VideoDetailPane'
                 },
                 variants: {
                     detail: "simple"
