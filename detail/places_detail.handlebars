@@ -59,9 +59,21 @@
                         <span class="tile__hours-today__hours  {{^if hoursToday}}hours-closed{{/if}}">{{#if hoursToday}}{{hoursToday}}{{else}}DDG.Text.CLOSED{{/if}}</span>
                     </div>
                 {{/if}}
+                <div class="tile__phone-directions">
                 {{#if phone}}
-                    <a class="tile__sub" href="tel:{{phone}}">{{phone}}</a>
+                    <a class="tile__phone" href="tel:{{phone}}">{{phone}}</a>
                 {{/if}}
+                {{#if address}}
+                    <div class="tile__directions">
+                        <a class="tile__directions__btn js-directions-link btn" href="{{directions}}">Directions</a>
+                        <select class="tile__directions__select js-directions-dropdown">
+                        {{#each directionSources}}
+                            <option value="{{url}}">{{name}}</option>
+                        {{/each}}
+                        </select>
+                    </div>
+                {{/if}}
+                </div>
             </div>
         </div>
     </div>
