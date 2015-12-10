@@ -65,8 +65,8 @@
                 {{/if}}
                 {{#if address}}
                     <div class="tile__directions">
-                        <a class="tile__directions__btn js-directions-link btn" href="{{directions}}">Directions</a>
-                        <select class="tile__directions__select js-directions-dropdown">
+                        <a class="tile__directions__link js-directions-link btn" href="{{directions}}">Directions</a>
+                        <select class="tile__directions__dropdown js-directions-dropdown">
                         {{#each directionSources}}
                             <option value="{{url}}">{{name}}</option>
                         {{/each}}
