@@ -21,62 +21,46 @@
             <h4 class="tile__title">
                 <a href="{{{url}}}">{{name}}</a>
             </h4>
-            <div class="tile--map__main  {{#if hours}}has-hours js-tile-map-with-hours{{/if}}">
-                <div class="tile--map__main__not-hours">
-                    <div class="tile__rating-and-price">
-                        <div class="tile__rating">
-                            {{#if meta.options.detail_rating}}
-                                {{{include meta.options.detail_rating}}}
-                            {{else}}
-                                {{#if rating}}
-                                    {{{starRating rating}}}
-                                {{/if}}
-                                {{#if reviews}}
-                                    {{{reviewCount reviews url}}}
-                                {{/if}}
+            <div class="tile--map__main">
+                <div class="tile__rating-and-price">
+                    <div class="tile__rating">
+                        {{#if meta.options.detail_rating}}
+                            {{{include meta.options.detail_rating}}}
+                        {{else}}
+                            {{#if rating}}
+                                {{{starRating rating}}}
                             {{/if}}
-                        </div>
-                        {{#and rating price}}
-                            <span class="sep"></span>
-                        {{/and}}
-                        {{#if price}}
-                            <span class="tile__price">{{{priceSymbols price 4}}}</span>
+                            {{#if reviews}}
+                                {{{reviewCount reviews url}}}
+                            {{/if}}
                         {{/if}}
                     </div>
-                    {{#if address_lines}}
-                        <a class="tile__sub" href="{{directions}}">
-                            {{#each address_lines}}
-                                {{.}}<br />
-                            {{/each}}
-                        </a>
-                    {{else}}
-                        {{#if address}}
-                            <p class="tile__sub">{{address}}</p>
-                        {{/if}}
-                    {{/if}}
-                    {{#if phone}}
-                        <a class="tile__sub  tile--map__main__bottom" href="tel:{{phone}}">{{phone}}</a>
+                    {{#and rating price}}
+                        <span class="sep"></span>
+                    {{/and}}
+                    {{#if price}}
+                        <span class="tile__price">{{{priceSymbols price 4}}}</span>
                     {{/if}}
                 </div>
+                {{#if address_lines}}
+                    <a class="tile__sub" href="{{directions}}">
+                        {{#each address_lines}}
+                            {{.}}<br />
+                        {{/each}}
+                    </a>
+                {{else}}
+                    {{#if address}}
+                        <p class="tile__sub">{{address}}</p>
+                    {{/if}}
+                {{/if}}
                 {{#if hours}}
-                    <div class="tile__hours">
-                        <div class="tile__hours-today  js-map-hours-expand">
-                            <span class="tile__hours-today__label">DDG.Text.TODAY:</span>
-                            <span class="tile__hours-today__hours  {{^if hoursToday}}hours-closed{{/if}}">{{#if hoursToday}}{{hoursToday}}{{else}}DDG.Text.CLOSED{{/if}}</span>
-                            <span class="tile__hours-today__expand  ddgsi">^</span>
-                        </div>
-                        <div class="tile__hours-full">
-                            <span class="tile__hours__close  ddgsi  js-map-hours-close">X</span>
-                            <table class="tile__hours-full__table">
-                                {{#hours}}
-                                    <tr {{#if isToday}}class="tile__hours-full__current"{{/if}}>
-                                        <td class="tile__hours-full__day">{{day}}:</td>
-                                        <td class="tile__hours-full__hours">{{hours}}</td>
-                                    </tr>
-                                {{/hours}}
-                            </table>
-                        </div>
+                    <div class="tile__hours-today">
+                        <span class="tile__hours-today__label">DDG.Text.TODAY:</span>
+                        <span class="tile__hours-today__hours  {{^if hoursToday}}hours-closed{{/if}}">{{#if hoursToday}}{{hoursToday}}{{else}}DDG.Text.CLOSED{{/if}}</span>
                     </div>
+                {{/if}}
+                {{#if phone}}
+                    <a class="tile__sub" href="tel:{{phone}}">{{phone}}</a>
                 {{/if}}
             </div>
         </div>
