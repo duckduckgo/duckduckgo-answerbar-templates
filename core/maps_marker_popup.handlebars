@@ -13,7 +13,7 @@
         {{/if}}
         {{#if address}}
             <div class="mapview-marker__popup__directions">
-                <a href="{{directions}}" class="mapview-marker__popup__directions__link">D</a>
+                <a href="{{directions}}" class="mapview-marker__popup__directions__link js-directions-link">D</a>
                 <select class="mapview-marker__popup__directions__dropdown js-directions-dropdown">
                 {{#each directionSources}}
                     <option value="{{url}}">{{name}}</option>
