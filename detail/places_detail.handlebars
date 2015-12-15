@@ -64,13 +64,8 @@
                     <a class="tile__phone btn" href="tel:{{phone}}">{{phone}}</a>
                 {{/if}}
                 {{#if address}}
-                    <div class="tile__directions">
+                    <div class="tile__directions js-directions-container">
                         <a class="tile__directions__link js-directions-link btn" href="{{directions}}">Directions</a>
-                        <select class="tile__directions__dropdown js-directions-dropdown">
-                        {{#each directionSources}}
-                            <option value="{{url}}">{{name}}</option>
-                        {{/each}}
-                        </select>
                     </div>
                 {{/if}}
                 </div>
