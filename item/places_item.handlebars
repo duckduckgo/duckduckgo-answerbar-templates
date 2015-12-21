@@ -31,25 +31,23 @@
     </div>
     <div class="tile--f__alt  tile--loc__alt">
         <div class="tile__body  {{#and url meta.sourceName}}has-foot{{/and}}">
-            <h6 class="tile__title">
-                <a href="{{url}}" title="{{name}}">{{ellipsis name 33}}</a>
-            </h6>
-            {{#if price}}
-                <span class="tile__price">{{{priceSymbols price 4}}}</span>
-            {{/if}}
-            {{#if address_lines}}
-                <a class="tile__address" href="{{directions}}">
-                    {{#each address_lines}}
-                        {{.}}<br />
-                    {{/each}}
-                </a>
-            {{else}}
-                {{#if address}}
-                    <span class="tile__address">{{ellipsis address 65}}</span>
+            <div class="tile__segment">
+                <h6 class="tile__title">
+                    <a href="{{url}}" title="{{name}}">{{ellipsis name 33}}</a>
+                </h6>
+                {{#if price}}
+                    <span class="tile__price">{{{priceSymbols price 4}}}</span>
                 {{/if}}
-            {{/if}}
+            </div>
             {{#if phone}}
-                <a class="tile__phone" href="tel:{{phone}}">{{phone}}</a>
+                <div class="tile__segment">
+                    <a class="tile__phone" href="tel:{{phone}}">{{phone}}</a>
+                </div>
+            {{/if}}
+            {{#if address}}
+                <div class="tile__segment tile__directions js-directions-container">
+                    <a class="tile__directions__link js-directions-link" href="{{directions}}">Directions</a>
+                </div>
             {{/if}}
             {{#and url meta.sourceName}}
                 <div class="tile__foot">
