@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="tile--f__alt  tile--loc__alt">
-        <div class="tile__body  {{#and url meta.sourceName}}has-foot{{/and}}">
+        <div class="tile__body  {{#and url meta.sourceName}}has-foot{{/and}} has-segments">
             <div class="tile__segment">
                 <h6 class="tile__title">
                     <a href="{{url}}" title="{{name}}">{{ellipsis name 33}}</a>
@@ -40,13 +40,18 @@
                 {{/if}}
             </div>
             {{#if phone}}
-                <div class="tile__segment">
-                    <a class="tile__phone" href="tel:{{phone}}">{{phone}}</a>
+                {{#if canMakeCalls}}
+                <a href="tel:{{phone}}" class="tile__segment"><div class="tile__segment__title">Call</div><div class="tile__phone">{{phone}}</div></a>
+                {{else}}
+                <div href="tel:{{phone}}" class="tile__segment">
+                    <div class="tile__segment__title">Phone Number</div>
+                    <div class="tile__phone">{{phone}}</div>
                 </div>
+                {{/if}}
             {{/if}}
             {{#if address}}
                 <div class="tile__segment tile__directions js-directions-container">
-                    <a class="tile__directions__link js-directions-link" href="{{directions}}">Directions</a>
+                    <a class="tile__directions__link tile__segment__title js-directions-link" href="{{directions}}">Directions</a>
                 </div>
             {{/if}}
             {{#and url meta.sourceName}}
