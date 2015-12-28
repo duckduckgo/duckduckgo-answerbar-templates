@@ -43,9 +43,9 @@
                 {{#if canMakeCalls}}
                 <a href="tel:{{phone}}" class="tile__segment"><div class="tile__segment__title">Call</div><div class="tile__phone">{{phone}}</div></a>
                 {{else}}
-                <div href="tel:{{phone}}" class="tile__segment">
+                <div class="tile__segment">
                     <div class="tile__segment__title">Phone Number</div>
-                    <div class="tile__phone">{{phone}}</div>
+                    <a href="tel:{{phone}}" class="tile__phone">{{phone}}</a>
                 </div>
                 {{/if}}
             {{/if}}
