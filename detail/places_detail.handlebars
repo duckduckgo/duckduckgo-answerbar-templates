@@ -62,13 +62,13 @@
                         <span class="tile__hours-today__hours  {{^if hoursToday}}hours-closed{{/if}}">{{#if hoursToday}}{{hoursToday}}{{else}}DDG.Text.CLOSED{{/if}}</span>
                     </div>
                 {{/if}}
-                <div class="tile__actions">
+                <div class="tile__actions {{#if compressActions}}tile__actions--small{{/if}}">
                 {{#if canMakeCalls}}
                     <a class="tile__actions__btn tile__call btn" href="tel:{{phone}}">Call</a>
                 {{/if}}
                 {{#if showDirections}}
                     <div class="tile__directions js-directions-container">
-                        <a class="tile__actions__btn btn js-directions-link" href="{{directions}}">Get Directions</a>
+                        <a class="tile__actions__btn btn js-directions-link" href="{{directions}}">{{#if compressActions}}Directions{{else}}Get Directions{{/if}}</a>
                     </div>
                 {{/if}}
                 </div>
