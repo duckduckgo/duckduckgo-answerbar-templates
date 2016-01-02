@@ -7,7 +7,13 @@
     </div>
     <div class="tile--img__details">
       <div class="tile--img__dimensions">
-	<i class="tile--img__icon">+</i>
+        {{#if isGif}}
+	  <i class="tile--img__icon">+</i>
+        {{else}}
+          <span class="tile--img__loader is-loading">
+            {{{loader}}}
+          </span>
+        {{/if}}
 	<em>{{width}} &times; {{height}}</em>
       </div>
     </div>
