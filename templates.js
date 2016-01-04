@@ -1,6 +1,16 @@
 !function(env) {
     
     env.Data.templates = {
+
+        defaultOptions: {
+            price: true,
+            brand: true,
+            rating: true,
+            ratingText: true,
+            moreAt: true,
+            content: false
+        },
+
         groups: {
             // base: a container
             base: {
