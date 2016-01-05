@@ -1,37 +1,34 @@
-<div class="detail__inner">
-    {{#if img_m}}
-        <div class="detail__media  detail__media--pr">
-            <img class="detail__media__img" src="{{imageProxy img_m}}" />
+<div class="c-detail">
+    {{{formatTitle heading href=url el="h5" className="c-detail__title" ellipsis=160 }}}
+    <div class="c-detail__subtitle">
+        {{#and meta.options.price price}}
+            <span class="c-detail__price  price  tx-clr--dk2">{{price}}</span>
+        {{/and}}
+        {{#and meta.options.price meta.options.brand price brand}}
+            <span class="sep  c-detail__sep"></span>
+        {{/and}}
+        {{#and meta.options.brand brand}}
+            <span class="c-detail__brand">DDG.Text.MADE_BY_BRAND</span>
+        {{/and}}
+        {{#if subtitle}}
+            {{#if meta.options.subtitle_content}}
+                {{{include meta.options.subtitle_content}}}
+            {{else}}
+                {{formatSubtitle subtitle}}
+            {{/if}}
+        {{/if}}
+    </div>
+    {{#if meta.options.rating}}
+        <div class="c-detail__rating">
+            {{{starsAndReviews rating reviewCount url_review meta.options.hideReviewText}}}
         </div>
     {{/if}}
-    <div class="detail__body  detail__body--pr">
-        <div class="c-detail  detail__body__content">
-            {{{formatTitle heading href=url el="h5" className="c-detail__title" ellipsis=120 }}}
-            <p class="c-detail__subtitle">
-                {{#and meta.options.price price}}
-                    <span class="c-detail__price  price  tx-clr--dk2">{{price}}</span>
-                {{/and}}
-                {{#and meta.options.price meta.options.brand price brand}}
-                    <span class="sep  c-detail__sep"></span>
-                {{/and}}
-                {{#and meta.options.brand brand}}
-                    <span class="c-detail__brand">DDG.Text.MADE_BY_BRAND</span>
-                {{/and}}
-                {{#if meta.options.subtitle_content}}
-                    {{{include meta.options.subtitle_content}}}
-                {{/if}}
-            </p>
-            {{#if meta.options.rating}}
-                <p class="c-detail__rating">
-                    {{{starsAndReviews rating reviewCount url_review meta.options.hideReviewText}}}
-                </p>
-            {{/if}}
-            <p class="c-detail__desc  hide--screen-xs">
-                {{{abstract}}}
-            </p>
-            {{#if meta.options.buy}}
-                {{{include meta.options.buy}}}
-            {{/if}}
-        </div>
+    <div class="c-detail__desc {{#if meta.options.hideDescMobile}}hide--mob{{/if}} {{#if meta.options.hideDescLandscape}}hide--dsp-lan{{/if}}">
+        {{{abstract}}}
     </div>
+    {{#if meta.options.buy}}
+        <div class="c-detail__callout">
+            {{{include meta.options.buy}}}
+        </div>
+    {{/if}}
 </div>

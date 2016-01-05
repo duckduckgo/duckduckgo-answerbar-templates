@@ -1,0 +1,16 @@
+<div class="dsp  dsp-lg">
+{{#unless noMedia}}
+    <div class="dsp-lg__media  dsp-lg__media--{{meta.id}}  js-detail-media {{meta.elClass.detailMedia}}" {{#if detail.mediaWidth}}style="width:{{detail.mediaWidth}};"{{/if}}>
+        {{#if media_content}}
+            {{{media_content}}}
+        {{else}}
+            {{#if image}}
+                <img class="dsp__media__img  dsp-lg__media__img {{meta.elClass.detailImg}}" src="{{imageProxy image}}" alt="{{imageAlt}}" />
+            {{/if}}
+        {{/if}}
+    </div>
+{{/unless}}
+    <div class="dsp-lg__body  js-detail-body  dsp-lg__body--{{meta.id}}  {{meta.elClass.detailBody}} {{#if noMedia}}no-media{{/if}}">
+        <div class="dsp-lg__body__content">{{{content}}}</div>
+    </div>
+</div>

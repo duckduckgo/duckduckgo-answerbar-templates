@@ -44,12 +44,18 @@
                 item: 'products_item',
                 detail: 'products_detail',
                 item_detail: 'products_item_detail',
+                item_detail_media: 'products_item_detail_media',
                 wrap_detail: 'base_detail',
                 options: {
                     rating: true,
                     price: true,
                     brand: true,
-                    hideReviewText: false
+                    hideReviewText: false,
+                    hideDescLandscape: true,
+                    detailMediaShape: 'square'
+                },
+                variants: {
+                    button: 'primary'
                 }
             },
             products_simple: {
@@ -61,22 +67,29 @@
                     price: false,
                     brand: false,
                     rating: false,
-                    ratingText: true
+                    ratingText: true,
+                    detailMediaShape: '4x3'
                 }
             },
             movies: {
                 item: 'basic_image_item',
                 detail: 'products_detail',
-                item_detail: 'products_item_detail',
+                item_detail: 'media_item_detail',
+                item_detail_media: 'detail_pane_media_spacer',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
                     brand: false,
                     rating: false,
-                    ratingText: true
+                    ratingText: true,
+                    detailDark: true,
+                    detailMediaWidth: 185,
+                    detailMediaShape: 'square',
+                    hideDescLandscape: true
                 },
                 variants: {
-                    tile: 'poster'
+                    tile: 'poster',
+                    button: 'primary'
                 },
                 elClass: {
                     tileBody: 'is-hidden'
@@ -87,6 +100,7 @@
                 detail: 'basic_info_detail',
                 item_detail: 'media_item_detail',
                 options: {
+                    detailMediaShape: '4x3',
                     moreAt: true,
                     aux: false
                 }
@@ -106,11 +120,29 @@
             },
             images: {
                 item: 'images_item',
-                detail: 'images_detail'
+                item_detail: 'images_detail',
+                item_detail_media: 'images_detail_media',
+                options: {
+                    detailDark: true,
+                    noDetailLandscape: true,
+                    detailPane: 'ImageDetailPane'
+                },
+                variants: {
+                    detail: "simple"
+                }
             },
             videos: {
                 item: 'videos_item',
-                detail: 'videos_detail'
+                item_detail: 'videos_detail',
+                item_detail_media: 'videos_detail_media',
+                options: {
+                    detailDark: true,
+                    noDetailLandscape: true,
+                    detailPane: 'VideoDetailPane'
+                },
+                variants: {
+                    detail: "simple"
+                }
             }
         },
         
@@ -131,8 +163,17 @@
                 green: 'bg-clr--green',
                 gold: 'bg-clr--gold'
             },
+            button: {
+                alt: 'btn--alt',
+                critical: 'btn--critical',
+                primary: 'btn--primary',
+                primaryAlt: 'btn--primary--alt',
+                secondary: 'btn--secondary'
+            },
             detail: {
-                light: "detail--l"
+                simple: "detail--simple",
+                light: "detail--l",
+                dark: "detail--xd"
             },
             tile: {
                 narrow: "tile--c--n",

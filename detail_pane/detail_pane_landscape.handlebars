@@ -1,0 +1,15 @@
+<div class="dsp dsp-lan">
+    <div class="dsp-lan__media  dsp-lan__media--{{meta.id}}  js-detail-media {{meta.elClass.detailMedia}}">
+        {{#if media_content}}
+            {{{media_content}}}
+        {{else}}
+            {{#if image}}
+                <img class="dsp__media__img dsp-lan__media__img {{meta.elClass.detailImg}}" src="{{imageProxy image}}" alt="{{imageAlt}}" />
+            {{/if}}
+        {{/if}}
+    </div>
+    <div class="dsp-lan__body  js-detail-body  dsp-lan__body--{{meta.id}}  {{meta.elClass.detailBody}}">
+        <div class="dsp-lan__body__content">{{{content}}}</div>
+    </div>
+</div>
+
