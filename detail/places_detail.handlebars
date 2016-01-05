@@ -57,6 +57,24 @@
                     {{#if phone}}
                         <a class="tile__sub  tile--map__main__bottom" href="tel:{{phone}}">{{phone}}</a>
                     {{/if}}
+                    {{#if address}}
+                        <a href="https://bing.com/maps/?obox=1&q={{address}}" value="{{address}}" id="dir_upstream">Directions </a>
+<!--                        <span style="color:black"> on</span>   -->
+                        <span> on</span>
+                        <div class="frm__select--noborder">
+                             <select style="vertical-align:text-bottom" class="js-set-input" id="directions_source">
+                             <option value="https://bing.com/maps/?obox=1&q=">Bing</option>
+                             <option value="https://www.here.com/directions/drive//">HERE</option>
+                             <option value="https://www.google.com/maps/dir//">Google</option>
+                             </select>
+                        </div>
+                        <script>$('#directions_source').on('change',function(){
+                                var tmp_addr = $('#dir_upstream').attr('value');
+                                               var upstream_root = $(this).val();
+                                var new_address = upstream_root + tmp_addr;
+                                $('#dir_upstream').attr('href', new_address);
+                        });</script>
+                    {{/if}}
                 </div>
                 {{#if hours}}
                     <div class="tile__hours">
