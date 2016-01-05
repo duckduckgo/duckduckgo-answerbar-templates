@@ -1,6 +1,9 @@
 {{~#unless this.n~}}
 <div class="tile  tile--img  has-detail" style="width:{{tileWidth}}px;">
     <div class="tile--img__media">
+      {{#if isGif}}
+        <div class="gif-indicator"></div>
+      {{/if}}
       <span class="tile--img__media__i">
         <img class="tile--img__img  js-lazyload" src="" data-src="{{imageProxy thumbnail}}" data-orig="{{imageProxy image}}" alt="{{title}}" />
       </span>
