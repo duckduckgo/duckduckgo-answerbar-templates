@@ -1,1 +1,3 @@
-<img class="dsp__media__img  {{meta.elClass.detailImg}}" src="{{imageProxy largeImage}}" alt="{{imageAlt}}" />
+<div class="dsp__media__wrapper  {{#if templates.options.detailPaneMediaSpacer}}dsp__media__spacer{{/if}} {{#if templates.options.detailPaneLight}}dsp__media__overlay{{/if}}">
+    <img class="dsp__media__img" src="{{imageProxy detail_image}}" alt="{{imageAlt}}" />
+</div>

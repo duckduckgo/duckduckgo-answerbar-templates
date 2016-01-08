@@ -1,13 +1,13 @@
 <div class="detail__pane">
    <div class="dsp  dsp-mob">
    {{#if hasMedia}}
-        <div class="dsp-mob__media  dsp-mob__media--{{meta.id}}  js-detail-media {{meta.elClass.detailMedia}}">
+        <div class="dsp-mob__media  dsp-mob__media--{{id}}  js-detail-media">
             {{#if hasMediaImage}}
-                <img class="dsp__media__img dsp-mob__media__img {{meta.elClass.detailImg}}" src="{{imageProxy image}}" alt="{{imageAlt}}" />
+                <img class="dsp__media__img dsp-mob__media__img" src="{{imageProxy image}}" alt="{{imageAlt}}" />
             {{/if}}
         </div>
     {{/if}}
-        <div class="dsp-mob__body  js-detail-body  dsp-mob__body--{{meta.id}} {{meta.elClass.detailBody}} {{#if meta.options.detailMediaShape}}is-dynamic{{/if}}">
+        <div class="dsp-mob__body  js-detail-body  dsp-mob__body--{{id}} {{#if templates.options.detailMediaShape}}is-dynamic{{/if}}">
             <div class="dsp-mob__body__content  js-detail-content">
                 <span class="dsp__arrow  js-detail-arrow"></span>
             </div>

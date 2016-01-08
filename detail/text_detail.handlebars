@@ -1,8 +1,8 @@
 <div class="cw {{#if infoboxData}}has-aux{{/if}}">
   <div class="zci__main  c-base">
     <div class="zci__body">
-      {{#if image}}
-        <div class="c-base__img-wrap"><img class="c-base__img" src="{{imageProxy image}}"></div>
+      {{#if detail_image}}
+        <div class="c-base__img-wrap"><img class="c-base__img" src="{{imageProxy detail_image}}"></div>
       {{/if}}
       {{#if meta.options.title_content}}
         {{{include meta.options.title_content}}}

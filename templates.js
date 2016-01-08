@@ -50,7 +50,7 @@
                 item: 'products_item',
                 detail: 'products_detail',
                 detail_pane_content: 'products_detail_pane_content',
-                detail_pane_media: 'products_detail_pane_media',
+                detail_pane_media: 'detail_pane_media',
                 wrap_detail: 'base_detail',
                 options: {
                     rating: true,
@@ -58,7 +58,7 @@
                     brand: true,
                     hideReviewText: false,
                     hideDescLandscape: true,
-                    detailMediaShape: 'square'
+                    detailPaneMediaShape: 'square'
                 },
                 variants: {
                     button: 'primary'
@@ -74,23 +74,24 @@
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    detailMediaShape: '4x3'
+                    detailPaneMediaShape: '4x3'
                 }
             },
             movies: {
                 item: 'basic_image_item',
                 detail: 'products_detail',
                 detail_pane_content: 'media_detail_pane_content',
-                detail_pane_media: 'media_detail_pane_media',
+                detail_pane_media: 'detail_pane_media',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
                     brand: false,
                     rating: false,
                     ratingText: true,
-                    detailDark: true,
-                    detailMediaWidth: 185,
-                    detailMediaShape: 'square',
+                    detailPaneDark: true,
+                    detailPaneMediaWidth: 185,
+                    detailPaneMediaShape: 'square',
+                    detailPaneMediaSpacer: true,
                     hideDescLandscape: true
                 },
                 variants: {
@@ -106,7 +107,7 @@
                 detail: 'basic_info_detail',
                 detail_pane_content: 'media_detail_pane_content',
                 options: {
-                    detailMediaShape: '4x3',
+                    detailPaneMediaShape: '4x3',
                     moreAt: true,
                     aux: false
                 }
@@ -130,7 +131,6 @@
                 detail_pane_media: 'images_detail_pane_media',
                 options: {
                     detailPaneDark: true,
-                    detailPaneClass: 'ImageDetailPane',
                     detailPaneMobilePortraitOnly: true
                 },
                 variants: {

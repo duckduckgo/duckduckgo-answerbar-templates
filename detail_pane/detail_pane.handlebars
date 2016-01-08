@@ -1,13 +1,13 @@
 <div class="detail__pane">
     <div class="dsp  dsp-lg">
     {{#if hasMedia}}
-        <div class="dsp-lg__media  dsp-lg__media--{{meta.id}}  js-detail-media {{meta.elClass.detailMedia}}" {{#if detail.mediaWidth}}style="width:{{detail.mediaWidth}};"{{/if}}>
+        <div class="dsp-lg__media  dsp-lg__media--{{id}}  js-detail-media">
             {{#if hasMediaImage}}
-                <img class="dsp__media__img  dsp-lg__media__img {{meta.elClass.detailImg}}" src="{{imageProxy image}}" alt="{{imageAlt}}" />
+                <img class="dsp__media__img  dsp-lg__media__img" src="{{imageProxy image}}" alt="{{imageAlt}}" />
             {{/if}}
         </div>
     {{/if}}
-        <div class="dsp-lg__body  js-detail-body  dsp-lg__body--{{meta.id}}  {{meta.elClass.detailBody}} {{#if noMedia}}no-media{{/if}}">
+        <div class="dsp-lg__body  js-detail-body  dsp-lg__body--{{id}}  {{^if hasMedia}}no-media{{/if}}">
             <div class="dsp-lg__body__content  js-detail-content">{{{content}}}</div>
         </div>
     </div>

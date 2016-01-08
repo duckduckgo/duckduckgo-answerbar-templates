@@ -1,9 +1,9 @@
 <div class="c-info--cw  cw {{#if infoboxData}}has-aux{{/if}}">
   <div class="zci__main  c-info">
     <div class="zci__body">
-    {{#if image}}
+    {{#if detail_image}}
         <div class="c-info__img-wrap  c-info__img-wrap--{{#if imageTile}}tile{{else}}clip{{/if}}">
-           <a href="{{{url}}}" class="c-info__img-wrap__in"><img class="c-info__img  js-detail-img" src="{{{imageProxy image}}}" /></a>
+           <a href="{{{url}}}" class="c-info__img-wrap__in"><img class="c-info__img  js-detail-img" src="{{{imageProxy detail_image}}}" /></a>
         </div>
     {{/if}}
         <div class="c-info__body">
