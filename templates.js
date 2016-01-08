@@ -11,6 +11,12 @@
             content: false
         },
 
+        detail_pane: {
+            desktop: 'detail_pane',
+            mobile: 'detail_pane_mobile',
+            mobile_landscape: 'detail_pane_mobile_landscape'
+        },
+
         groups: {
             // base: a container
             base: {
@@ -43,8 +49,8 @@
             products: {
                 item: 'products_item',
                 detail: 'products_detail',
-                item_detail: 'products_item_detail',
-                item_detail_media: 'products_item_detail_media',
+                detail_pane_content: 'products_detail_pane_content',
+                detail_pane_media: 'products_detail_pane_media',
                 wrap_detail: 'base_detail',
                 options: {
                     rating: true,
@@ -61,7 +67,7 @@
             products_simple: {
                 item: 'basic_image_item',
                 detail: 'products_detail',
-                item_detail: 'products_item_detail',
+                detail_pane_content: 'products_detail_pane_content',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
@@ -74,8 +80,8 @@
             movies: {
                 item: 'basic_image_item',
                 detail: 'products_detail',
-                item_detail: 'media_item_detail',
-                item_detail_media: 'detail_pane_media_spacer',
+                detail_pane_content: 'media_detail_pane_content',
+                detail_pane_media: 'media_detail_pane_media',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
@@ -98,7 +104,7 @@
             media: {
                 item: 'media_item',
                 detail: 'basic_info_detail',
-                item_detail: 'media_item_detail',
+                detail_pane_content: 'media_detail_pane_content',
                 options: {
                     detailMediaShape: '4x3',
                     moreAt: true,
@@ -108,7 +114,7 @@
             icon: {
                 item: 'text_item',
                 detail: 'basic_icon_detail',
-                item_detail: 'products_item_detail'
+                detail_pane_content: 'products_detail_pane_content'
             },
             places: {
                 item: 'places_item',
@@ -120,12 +126,12 @@
             },
             images: {
                 item: 'images_item',
-                item_detail: 'images_detail',
-                item_detail_media: 'images_detail_media',
+                detail_pane_content: 'images_detail_pane_content',
+                detail_pane_media: 'images_detail_pane_media',
                 options: {
-                    detailDark: true,
-                    noDetailLandscape: true,
-                    detailPane: 'ImageDetailPane'
+                    detailPaneDark: true,
+                    detailPaneClass: 'ImageDetailPane',
+                    detailPaneMobilePortraitOnly: true
                 },
                 variants: {
                     detail: "simple"
@@ -133,12 +139,12 @@
             },
             videos: {
                 item: 'videos_item',
-                item_detail: 'videos_detail',
-                item_detail_media: 'videos_detail_media',
+                detail_pane_content: 'videos_detail_pane_content',
+                detail_pane_media: 'videos_detail_pane_media',
                 options: {
-                    detailDark: true,
-                    noDetailLandscape: true,
-                    detailPane: 'VideoDetailPane'
+                    detailPaneDark: true,
+                    detailPaneClass: 'VideoDetailPane',
+                    detailPaneMobilePortraitOnly: true
                 },
                 variants: {
                     detail: "simple"
