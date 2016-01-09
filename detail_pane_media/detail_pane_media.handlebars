@@ -1,3 +1,6 @@
 <div class="dsp__media__wrapper  {{#if templates.options.detailPaneMediaSpacer}}dsp__media__spacer{{/if}} {{#if templates.options.detailPaneLight}}dsp__media__overlay{{/if}}">
-    <img class="dsp__media__img" src="{{imageProxy detail_image}}" alt="{{imageAlt}}" />
+    <img class="dsp__media__img  js-detail-img" src="{{imageProxy detail_image}}" {{#if width}}style="width:{{width}};height:{{height}};"{{/if}} />
+    {{#if detail_image_large}}
+        <img class="dsp__media__img-highres  js-detail-img-highres" alt="{{imageAlt}}" {{#if width}}style="width:{{width}};height:{{height}};"{{/if}} />
+    {{/if}}
 </div>

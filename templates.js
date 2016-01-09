@@ -50,7 +50,6 @@
                 item: 'products_item',
                 detail: 'products_detail',
                 detail_pane_content: 'products_detail_pane_content',
-                detail_pane_media: 'detail_pane_media',
                 wrap_detail: 'base_detail',
                 options: {
                     rating: true,
@@ -81,7 +80,6 @@
                 item: 'basic_image_item',
                 detail: 'products_detail',
                 detail_pane_content: 'media_detail_pane_content',
-                detail_pane_media: 'detail_pane_media',
                 wrap_detail: 'base_detail',
                 options: {
                     price: false,
@@ -128,7 +126,6 @@
             images: {
                 item: 'images_item',
                 detail_pane_content: 'images_detail_pane_content',
-                detail_pane_media: 'images_detail_pane_media',
                 options: {
                     detailPaneDark: true,
                     detailPaneMobilePortraitOnly: true
@@ -140,7 +137,6 @@
             videos: {
                 item: 'videos_item',
                 detail_pane_content: 'videos_detail_pane_content',
-                detail_pane_media: 'videos_detail_pane_media',
                 options: {
                     detailPaneDark: true,
                     detailPaneClass: 'VideoDetailPane',
