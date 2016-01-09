@@ -1,11 +1,7 @@
 <div class="detail__pane">
     <div class="dsp  dsp-lg">
     {{#if hasMedia}}
-        <div class="dsp-lg__media  dsp-lg__media--{{id}}  js-detail-media">
-            {{#if hasMediaImage}}
-                <img class="dsp__media__img  dsp-lg__media__img" src="{{imageProxy image}}" alt="{{imageAlt}}" />
-            {{/if}}
-        </div>
+        <div class="dsp-lg__media  dsp-lg__media--{{id}}  js-detail-media"></div>
     {{/if}}
         <div class="dsp-lg__body  js-detail-body  dsp-lg__body--{{id}}  {{^if hasMedia}}no-media{{/if}}">
             <div class="dsp-lg__body__content  js-detail-content">{{{content}}}</div>

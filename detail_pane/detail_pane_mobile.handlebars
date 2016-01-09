@@ -1,11 +1,7 @@
 <div class="detail__pane">
    <div class="dsp  dsp-mob">
    {{#if hasMedia}}
-        <div class="dsp-mob__media  dsp-mob__media--{{id}}  js-detail-media">
-            {{#if hasMediaImage}}
-                <img class="dsp__media__img dsp-mob__media__img" src="{{imageProxy image}}" alt="{{imageAlt}}" />
-            {{/if}}
-        </div>
+        <div class="dsp-mob__media  dsp-mob__media--{{id}}  js-detail-media"></div>
     {{/if}}
         <div class="dsp-mob__body  js-detail-body  dsp-mob__body--{{id}} {{#if templates.options.detailMediaShape}}is-dynamic{{/if}}">
             <div class="dsp-mob__body__content  js-detail-content">
