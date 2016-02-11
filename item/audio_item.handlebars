@@ -1,7 +1,7 @@
 <div class="tile  tile--c--n  tile--audio  tile--no-highlight {{#if elClass}}{{elClass}}{{else}}{{meta.elClass.tile}}{{/if}}">
     <div class="tile__media">
         {{#if image}}
-        <img class="tile__media__img" src="{{imageProxy image}}" />
+        <img class="tile__media__img js-lazyload" src="" data-src="{{{imageProxy image}}}" />
         {{else}}
         <div class="tile__media__no-artwork ddgsi">♫</div>
         {{/if}}
