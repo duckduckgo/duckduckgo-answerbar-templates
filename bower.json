@@ -1,6 +1,6 @@
 {
   "name": "duckduckgo-answerbar-templates",
-  "version": "1.2.8",
+  "version": "1.2.11",
   "description": "Templates used in DuckDuckGo's Instant Answers",
   "license": "Apache2",
   "ignore": [
