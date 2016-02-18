@@ -8,7 +8,9 @@
                     <hr class="attribution__hr"/>
                     {{#if devs}}
                         {{#each devs}}
-                            <div class="tx-clr--slate-light">DDG.Text.ATTRIBUTION_DEV: <b class="tx-clr--slate">{{this.name}}</b></div>
+                            {{#if this.show}}
+                                <div class="tx-clr--slate-light">DDG.Text.ATTRIBUTION_DEV: <a href="{{this.url}}" class="tx-clr--slate">{{this.name}}</a></div>
+                            {{/if}}
                         {{/each}}
                         <hr class="attribution__hr"/>
                     {{/if}}
