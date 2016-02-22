@@ -4,7 +4,7 @@
     {{/if}}
     {{#if address}}
         {{#if showDirectionsAddress}}
-            <a class="mapview-marker__popup__address"><span class="ddgsi">d</span>{{address}}</a>
+            <a class="mapview-marker__popup__address js-directions-address" href="{{directions}}"><span class="ddgsi">d</span>{{address}}</a>
         {{else}}
             <span class="mapview-marker__popup__address">{{address}}</span>
         {{/if}}
