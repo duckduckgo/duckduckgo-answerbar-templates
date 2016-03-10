@@ -1,20 +1,23 @@
-{{#if meta.sourceName}}
-    <a class="mapview-marker__popup" href="{{url}}" title="DDG.Text.MORE_AT {{meta.sourceName}}">{{ellipsis name 31}} <span class="mapview-marker__arrow">▶</span></a>
-{{else}}
-    <span class="mapview-marker__popup {{#if singleLinePopup}}mapview-marker__popup--single-line{{/if}} {{#if showDirections}}has-directions{{/if}}">
-        {{#if name}}
-            <span class="mapview-marker__popup__name">{{name}}</span>
+<span class="mapview-marker__popup {{#if singleLinePopup}}mapview-marker__popup--single-line{{/if}} {{#if showDirectionsDropdown}}has-directions{{/if}}">
+    {{#if name}}
+        <span class="mapview-marker__popup__name">{{name}}</span>
+    {{/if}}
+    {{#if address}}
+        <span class="mapview-marker__popup__address">
+        {{#if showDirectionsAddress}}
+            <span class="ddgsi mapview-marker__popup__directions-icon">d</span>
+            <a class="mapview-marker__popup__directions-address js-directions-address" href="{{directions}}">{{address}}</a>
+        {{else}}
+            {{address}}
         {{/if}}
-        {{#if address}}
-            <span class="mapview-marker__popup__address">{{address}}</span>
-        {{/if}}
-        {{#if displayLatLon}}
-            <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
-        {{/if}}
-        {{#if showDirections}}
-            <div class="mapview-marker__popup__directions js-directions-container">
-                <a href="{{directions}}" class="mapview-marker__popup__directions__link js-directions-link">d</a>
-            </div>
-        {{/if}}
-    </span>
-{{/if}}
+        </span>
+    {{/if}}
+    {{#if displayLatLon}}
+        <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
+    {{/if}}
+    {{#if showDirectionsDropdown}}
+        <div class="mapview-marker__popup__directions js-directions-container">
+            <a href="{{directions}}" class="mapview-marker__popup__directions__link js-directions-link">d</a>
+        </div>
+    {{/if}}
+</span>
