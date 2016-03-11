@@ -41,17 +41,17 @@
             </div>
             {{#if phone}}
                 {{#if canMakePhoneCalls}}
-                <a href="tel:{{phone}}" class="tile__segment tile__call js-tel-link"><div class="tile__segment__title">Call</div><div class="tile__phone">{{phone}}</div></a>
+                <a href="tel:{{phone}}" class="tile__segment tile__call js-tel-link"><div class="tile__segment__title">DDG.Text.CALL</div><div class="tile__phone">{{phone}}</div></a>
                 {{else}}
                 <div class="tile__segment">
-                    <div class="tile__segment__title">Phone Number</div>
+                    <div class="tile__segment__title">DDG.Text.PHONE_NUMBER</div>
                     <a href="tel:{{phone}}" class="tile__phone js-tel-link">{{phone}}</a>
                 </div>
                 {{/if}}
             {{/if}}
             {{#if address}}
                 <div class="tile__segment tile__directions js-directions-container">
-                    <a class="tile__directions__link tile__segment__title js-directions-link" href="{{directions}}">Directions</a>
+                    <a class="tile__directions__link tile__segment__title js-directions-link" href="{{directions}}">DDG.Text.DIRECTIONS</a>
                 </div>
             {{/if}}
             {{#and url meta.sourceName}}
