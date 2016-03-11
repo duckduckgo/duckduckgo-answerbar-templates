@@ -1,23 +1,26 @@
-<span class="mapview-marker__popup {{#if singleLinePopup}}mapview-marker__popup--single-line{{/if}} {{#if showDirectionsDropdown}}has-directions{{/if}}">
-    {{#if name}}
-        <span class="mapview-marker__popup__name">{{name}}</span>
-    {{/if}}
-    {{#if address}}
-        <span class="mapview-marker__popup__address">
-        {{#if showDirectionsAddress}}
-            <span class="ddgsi mapview-marker__popup__directions-icon">d</span>
-            <a class="mapview-marker__popup__directions-address js-directions-address" href="{{directions}}">{{address}}</a>
-        {{else}}
-            {{address}}
+<span class="mapview-marker__popup {{#if singleLinePopup}}mapview-marker__popup--single-line{{/if}} {{#if showDirections}}has-directions js-directions-container{{/if}}">
+    {{#unless showDirections}}
+        {{#if name}}
+            <span class="mapview-marker__popup__name">{{name}}</span>
         {{/if}}
-        </span>
-    {{/if}}
-    {{#if displayLatLon}}
-        <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
-    {{/if}}
-    {{#if showDirectionsDropdown}}
-        <div class="mapview-marker__popup__directions js-directions-container">
-            <a href="{{directions}}" class="mapview-marker__popup__directions__link js-directions-link">d</a>
-        </div>
-    {{/if}}
+        {{#if address}}
+            <span class="mapview-marker__popup__address">{{address}}</span>
+        {{/if}}
+        {{#if displayLatLon}}
+            <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
+        {{/if}}
+    {{else}}
+        {{#if name}}
+            <div class="mapview-marker__popup__directions-name">
+                <a class="ddgsi mapview-marker__popup__directions-icon js-directions-link" href="#">d</a>
+                <a class="mapview-marker__popup__name js-directions-link" href="#">{{name}}</a>
+            </div>
+        {{/if}}
+        {{#if address}}
+            <a class="mapview-marker__popup__address js-directions-link" href="#">{{address}}</a>
+        {{/if}}
+        {{#if displayLatLon}}
+            <a class="mapview-marker__popup__latlon js-directions-link" href="#">{{{displayLatLon}}}</a>
+        {{/if}}
+    {{/unless}}
 </span>
