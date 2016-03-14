@@ -10,17 +10,19 @@
             <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
         {{/if}}
     {{else}}
+        <a class="js-directions-link" href="#">
         {{#if name}}
             <div class="mapview-marker__popup__directions-name">
-                <a class="ddgsi mapview-marker__popup__directions-icon js-directions-link" href="#">d</a>
-                <a class="mapview-marker__popup__name js-directions-link" href="#">{{name}}</a>
+                <span class="ddgsi mapview-marker__popup__directions-icon">d</span>
+                <span class="mapview-marker__popup__name">{{name}}</span>
             </div>
         {{/if}}
         {{#if address}}
-            <a class="mapview-marker__popup__address js-directions-link" href="#">{{address}}</a>
+            <span class="mapview-marker__popup__address">{{address}}</span>
         {{/if}}
         {{#if displayLatLon}}
-            <a class="mapview-marker__popup__latlon js-directions-link" href="#">{{{displayLatLon}}}</a>
+            <span class="mapview-marker__popup__latlon">{{{displayLatLon}}}</span>
         {{/if}}
+        </a>
     {{/unless}}
 </span>
