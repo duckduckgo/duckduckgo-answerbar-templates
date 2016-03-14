@@ -21,7 +21,7 @@
             <h4 class="tile__title">
                 <a href="{{{url}}}">{{name}}</a>
             </h4>
-            <div class="tile--map__main  {{#if hours}}has-hours js-tile-map-with-hours{{/if}}">
+            <div class="tile--map__main {{#if hours}}has-hours js-tile-map-with-hours{{/if}}">
                 <div class="tile--map__main__not-hours">
                     <div class="tile__rating-and-price">
                         <div class="tile__rating">
@@ -44,41 +44,49 @@
                         {{/if}}
                     </div>
                     {{#if address_lines}}
-                        <a class="tile__sub" href="{{directions}}">
+                        <p class="tile__sub">
                             {{#each address_lines}}
                                 {{.}}<br />
                             {{/each}}
-                        </a>
+                        </p>
                     {{else}}
                         {{#if address}}
                             <p class="tile__sub">{{address}}</p>
                         {{/if}}
                     {{/if}}
                     {{#if phone}}
-                        <a class="tile__sub  tile--map__main__bottom" href="tel:{{phone}}">{{phone}}</a>
+                        <a class="tile__phone" href="tel:{{phone}}">{{phone}}</a>
                     {{/if}}
+                    {{#if hours}}
+                        <div class="tile__hours-today">
+                            <span class="tile__hours-today__label">DDG.Text.TODAY:</span>
+                            <a href="#" class="tile__hours-today__hours js-map-hours-expand {{^if hoursToday}}hours-closed{{/if}}">{{#if hoursToday}}{{hoursToday}}{{else}}DDG.Text.CLOSED{{/if}}</a>
+                        </div>
+                    {{/if}}
+                    <div class="tile__actions {{#if compressActions}}tile__actions--small{{/if}}">
+                    {{#if canMakePhoneCalls}}
+                        <a class="tile__actions__btn tile__call btn js-tel-link" href="tel:{{phone}}">DDG.Text.CALL</a>
+                    {{/if}}
+                    {{#if showDirections}}
+                        <div class="tile__directions js-directions-container">
+                            <a class="tile__actions__btn btn js-directions-link" href="{{directions}}">{{#if compressActions}}DDG.Text.DIRECTIONS{{else}}DDG.Text.GET_DIRECTIONS{{/if}}</a>
+                        </div>
+                    {{/if}}
+                    </div>
                 </div>
                 {{#if hours}}
-                    <div class="tile__hours">
-                        <div class="tile__hours-today  js-map-hours-expand">
-                            <span class="tile__hours-today__label">DDG.Text.TODAY:</span>
-                            <span class="tile__hours-today__hours  {{^if hoursToday}}hours-closed{{/if}}">{{#if hoursToday}}{{hoursToday}}{{else}}DDG.Text.CLOSED{{/if}}</span>
-                            <span class="tile__hours-today__expand  ddgsi">^</span>
-                        </div>
-                        <div class="tile__hours-full">
-                            <span class="tile__hours__close  ddgsi  js-map-hours-close">X</span>
-                            <table class="tile__hours-full__table">
-                                {{#hours}}
-                                    <tr {{#if isToday}}class="tile__hours-full__current"{{/if}}>
-                                        <td class="tile__hours-full__day">{{day}}:</td>
-                                        <td class="tile__hours-full__hours">{{hours}}</td>
-                                    </tr>
-                                {{/hours}}
-                            </table>
-                        </div>
-                    </div>
+                <div class="tile__hours-full">
+                    <span class="tile__hours__close  ddgsi  js-map-hours-close">X</span>
+                    <table class="tile__hours-full__table">
+                        {{#hours}}
+                            <tr {{#if isToday}}class="tile__hours-full__current"{{/if}}>
+                                <td class="tile__hours-full__day">{{day}}:</td>
+                                <td class="tile__hours-full__hours">{{hours}}</td>
+                            </tr>
+                        {{/hours}}
+                    </table>
+                </div>
                 {{/if}}
-            </div>
         </div>
     </div>
 </div>
