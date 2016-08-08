@@ -27,17 +27,21 @@
             </div>
           {{/if}}
       {{/if}}
-      <div class="c-base__links">
-        {{#if meta.options.chompContent}}
-            {{{include 'chomp_link' className="c-base__link" sep=meta.options.moreAt}}}
-        {{/if}}
-        {{#if meta.options.moreAt}}
-            {{{moreAt meta 'none' className="c-base__link"}}}
-        {{/if}}
-        {{#if meta.options.moreText}}
-            <span class="c-base__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
-        {{/if}}
-      </div>
+
+      <!-- Make sure to check if we have anything to display before adding the element. -->
+      {{#if meta.options.moreText}}
+        <div class="c-base__links">
+          {{#if meta.options.chompContent}}
+              {{{include 'chomp_link' className="c-base__link" sep=meta.options.moreAt}}}
+          {{/if}}
+          {{#if meta.options.moreAt}}
+              {{{moreAt meta 'none' className="c-base__link"}}}
+          {{/if}}
+          {{#if meta.options.moreText}}
+              <span class="c-base__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
+          {{/if}}
+        </div>
+      {{/if}}
   </div>
 </div>
 
