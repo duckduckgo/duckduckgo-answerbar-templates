@@ -29,7 +29,7 @@
       {{/if}}
 
       <!-- Make sure to check if we have anything to display before adding the element. -->
-      {{#if meta.options.moreText}}
+      {{#or meta.options.moreAt meta.options.moreText meta.options.chompContent}}
         <div class="c-base__links">
           {{#if meta.options.chompContent}}
               {{{include 'chomp_link' className="c-base__link" sep=meta.options.moreAt}}}
@@ -41,7 +41,7 @@
               <span class="c-base__link--more  sep--before">{{{formatSubtitle meta.options.moreText}}}</span>
           {{/if}}
         </div>
-      {{/if}}
+      {{/or}}
   </div>
 </div>
 
