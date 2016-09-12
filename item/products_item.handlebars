@@ -5,9 +5,9 @@
 	</div>
 	<div class="tile__body  tile__body--pr">
         {{#if url}}
-            {{{formatTitle heading el="h6" className="tile__title" classNameSec="tile__title--pr" href="url" optSub=true}}}
+            {{{formatTitle heading el="h6" className="tile__title" classNameSec="tile__title--pr" href="url" optSub=true ellipsis=100}}}
         {{else}}
-            {{{formatTitle heading el="h6" className="tile__title" classNameSec="tile__title--pr" optSub=true}}}
+            {{{formatTitle heading el="h6" className="tile__title" classNameSec="tile__title--pr" optSub=true ellipsis=100}}}
         {{/if}}
 	<div class="tile__tx  tile--pr__sub  one-line">
 		{{#and meta.options.price price}}

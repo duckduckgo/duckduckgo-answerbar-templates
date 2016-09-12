@@ -5,7 +5,7 @@
         {{else}}
             <span class="media__img--rev" {{#if topic}}data-type="{{stripNonAlpha topic.id}}"{{/if}}></span>
         {{/if}}
-        {{{formatTitle Result el="h4" className="tile__title" parseFirst="true"}}}
+        {{{formatTitle Result el="h4" className="tile__title" parseFirst="true" ellipsis=100}}}
         <div class="tile__content  tile__content--sm">{{{ellipsis Result 95 parseFirst="true"}}}</div> {{! Text duplicates the title, using Result }}
     </div>
 </div>
