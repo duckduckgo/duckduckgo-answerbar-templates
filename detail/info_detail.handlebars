@@ -8,10 +8,44 @@
         {{/if}}
             <div class="c-info__body">
             {{#if Heading}}
-                {{{formatTitle Heading el="h1" className="c-info__title" href=AbstractURL ellipsis=100}}}
+                {{{formatTitle "Date" el="h1" className="c-info__title" href=AbstractURL ellipsis=100}}}
             {{/if}}
                 <div class="c-info__content chomp js-ellipsis">
-                    {{{Abstract}}}
+                  <p>Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC.</p>
+                  
+                  <pre>
+                    <code>
+new Date;<br>
+new Date(value);<br>
+new Date(dateString);<br>
+new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
+                    </code>
+                  </pre>
+
+                  <div class="prog__sub">Return Value</div>
+
+                  <p>The removed element.</p>
+
+                  <div class="prog__sub">Examples</div>
+
+                  <p>The following code displays an array before and after removing its first element. It also displays the removed element:</p>
+
+                  <pre>
+                    <code>var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];<br>
+<br>
+console.log('myFish before: ' + myFish);<br>
+// "myFish before: angel,clown,mandarin,surgeon"<br>
+<br>
+var shifted = myFish.shift(); <br>
+<br>
+console.log('myFish after: ' + myFish); <br>
+// "myFish after: clown,mandarin,surgeon" <br>
+<br>
+console.log('Removed this element: ' + shifted); <br>
+// "Removed this element: angel"<br>
+                    </code>
+                  </pre>
+
                 </div>
                 <div class="c-info__links">
                 {{{include 'chomp_link' className="c-info__link  c-info__link--chomp" sep=meta}}}
