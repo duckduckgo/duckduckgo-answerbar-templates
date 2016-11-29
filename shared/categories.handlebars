@@ -1,7 +1,11 @@
 <div class="categories">
-  {{#list Abstract.categories}}
+  {{#list this}}
   <li>
-    <p><strong>{{title}}</strong></p>
+    <p>
+      <strong>
+        <a href="/{{src_id}}/c/{{title}}">{{title}}</a>
+      </strong>
+    </p>
     <p>{{stripFathead description}}</p>
   </li>
   {{/list}}
