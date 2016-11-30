@@ -12,17 +12,12 @@
                     {{#if subtitle}}<span class="c-info__title__sub">{{{formatSubtitle subtitle}}}</span>{{/if}}
                 </h1>
             {{/if}}
-            {{#if meta.options.content}}
-                <div class="c-info__content {{#if meta.options.chompContent}}chomp js-ellipsis{{/if}}">
-                    {{{include meta.options.content}}}
-                </div>
-            {{else}}
                 {{#if description}}
                     <div class="c-info__content chomp js-ellipsis">
                         {{description}}
                     </div>
                 {{/if}}
-            {{/if}}
+
             <div class="c-info__links">
             {{{include 'chomp_link' className="c-info__link  c-info__link--chomp" sep=meta.options.moreAt}}}
             {{#if meta.options.moreAt}}

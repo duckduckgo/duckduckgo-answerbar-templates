@@ -1,9 +1,25 @@
+<div class="breadcrumbs">
+  <a href="/?q=ruby language">Ruby</a>
+  {{#each Abstract.all_parents}}
+    <span class="ddgsi ddgsi-next" style="font-size: .8em;"></span>
+    <a href="/?q={{this}}" style="text-transform: capitalize;"> {{this}}</a>
+  {{/each}}
+
+    <span class="ddgsi ddgsi-next" style="font-size: .8em;"></span>
+    <a href="#" style="text-transform: capitalize;"> {{Abstract.title}}</a>
+
+</div>
+
 <div class="categories">
+  <div>
+    {{{Abstract.desc}}}
+  </div>
+  
   {{#list this}}
   <li>
     <p>
       <strong>
-        <a href="/{{src_id}}/c/{{title}}">{{title}}</a>
+        <a href="/{{src_id}}/c/{{transform title}}?ia=docs">{{title}}</a>
       </strong>
     </p>
     <p>{{stripFathead description}}</p>
