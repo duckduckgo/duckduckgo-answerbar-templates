@@ -1,12 +1,16 @@
 <div class="breadcrumbs">
   <a href="/?q=ruby language">Ruby</a>
   {{#each Abstract.all_parents}}
-    <span class="ddgsi ddgsi-next" style="font-size: .8em;"></span>
-    <a href="/?q={{this}}" style="text-transform: capitalize;"> {{this}}</a>
+  <span class="ddgsi ddgsi-next" style="font-size: .8em;"></span>
+  {{#if @first}}
+  <a href="/?q={{this}}" style="text-transform: capitalize;"> {{this}}</a>
+  {{else}}
+  <a href="/?q=ruby {{this}}" style="text-transform: capitalize;"> {{this}}</a>
+  {{/if}}
   {{/each}}
 
     <span class="ddgsi ddgsi-next" style="font-size: .8em;"></span>
-    <a href="#" style="text-transform: capitalize;"> {{Abstract.title}}</a>
+    <span style="text-transform: capitalize;"> {{Abstract.title}}</span>
 
 </div>
 
@@ -16,13 +20,24 @@
   </div>
   
   {{#list this}}
-  <li>
+  <li class="js-expand-this g third" data-full="{{full}}" data-url="{{url}}">
     <p>
       <strong>
-        <a href="/{{src_id}}/c/{{transform title}}?ia=docs">{{title}}</a>
+        <a href="/?q={{signal}}%20{{title}}&ia=docs">{{title}}</a>
       </strong>
     </p>
-    <p>{{stripFathead description}}</p>
+    <p class="desc">
+
+    </p>
   </li>
   {{/list}}
+</div>
+
+<div class="cheatsheet__footer c-list__links">
+    <a class="c-list__link  chomp--link  {{#if metadata.sourceUrl}}sep--after{{/if}} can-expand">
+        <i class="chomp--link__icn"></i>
+        <span class="chomp--link__mr">Show More</span>
+        <span class="chomp--link__ls">Show Less</span>
+    </a>
+    <span>{{{moreAt metadata 'none' className="c-list__link"}}}</span>
 </div>
