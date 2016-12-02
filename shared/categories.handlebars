@@ -18,9 +18,10 @@
   <div>
     {{{Abstract.desc}}}
   </div>
-  
+
+  <h3 class="c-base__title" style="margin-top: 1em">Items</h3>
   {{#list this}}
-  <li class="js-expand-this g third" data-full="{{full}}" data-url="{{url}}">
+  <li class="js-expand-this g third {{#if hide}}should-hide hide{{/if}}" data-full="{{full}}" data-url="{{url}}">
     <p>
       <strong>
         <a href="/?q={{signal}}%20{{title}}&ia=docs">{{title}}</a>
@@ -33,7 +34,7 @@
   {{/list}}
 </div>
 
-<div class="cheatsheet__footer c-list__links">
+<div class="categories__footer c-list__links">
     <a class="c-list__link  chomp--link  {{#if metadata.sourceUrl}}sep--after{{/if}} can-expand">
         <i class="chomp--link__icn"></i>
         <span class="chomp--link__mr">Show More</span>
