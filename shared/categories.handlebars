@@ -19,13 +19,10 @@
     {{{Abstract.desc}}}
   </div>
 
-  <h3 class="c-base__title" style="margin-top: 1em">Items</h3>
   {{#list this}}
   <li class="js-expand-this g third {{#if hide}}should-hide hide{{/if}}" data-full="{{full}}" data-url="{{url}}">
     <p>
-      <strong>
-        <a href="/?q={{signal}}%20{{title}}&ia=docs">{{title}}</a>
-      </strong>
+      <a href="{{encode signal original_title}}&ia=docs">{{title}}</a>
     </p>
     <p class="desc">
 
@@ -34,11 +31,14 @@
   {{/list}}
 </div>
 
+{{#if Abstract.categories}}
 <div class="categories__footer c-list__links">
-    <a class="c-list__link  chomp--link  {{#if metadata.sourceUrl}}sep--after{{/if}} can-expand">
+    <a class="c-list__link  chomp--link  {{#if meta.src_url}}sep--after{{/if}} can-expand">
         <i class="chomp--link__icn"></i>
         <span class="chomp--link__mr">Show More</span>
         <span class="chomp--link__ls">Show Less</span>
     </a>
-    <span>{{{moreAt metadata 'none' className="c-list__link"}}}</span>
+    <span>{{{moreAt meta className="c-list__link"}}}</span>
 </div>
+
+{{/if}}
