@@ -13,6 +13,7 @@
 
 </div>
 
+
 <div class="categories">
   <div>
     {{#if Abstract.all_parents}}
@@ -23,7 +24,7 @@
   </div>
 
   {{#if Abstract.categories}}
-  <h3 class="c-base__title" style="margin-top: 1em; color: #888888;">
+  <h3 class="c-base__title" style="margin-top: 1em">
     {{#if Abstract.all_parents}}
     Methods
     {{else}}
@@ -35,8 +36,8 @@
 
   
   {{#list this}}
-  <li class="js-expand-this g third {{#if hide}}should-hide hide{{/if}}" data-full="{{full}}" data-url="{{url}}">
-    <p>
+  <li class="js-expand-this g half {{#if hide}}should-hide hide{{/if}}" data-full="{{full}}" data-url="{{url}}">
+    <p class="one-line">
       <a href="{{encode signal original_title}}&ia=docs"> {{title}}</a>
     </p>
     <p class="desc">
