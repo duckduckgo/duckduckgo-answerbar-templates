@@ -1,10 +1,16 @@
 <div class="tile  tile--c--w  tile--news" data-link="{{url}}">
-    {{#if fetch_image}}
-        <div class="tile__media">
-            <div class="tile__media__plc ddgsi ddgsi-news"></div>
-            {{#if image}}<div class="tile__media__img" style="background-image:url({{imageProxy image}});"></div>{{/if}}
-        </div>
-    {{/if}}
+	{{#if image}}
+		<div class="tile__media">
+			<div class="tile__media__img" style="background-image:url({{imageProxy image}});"></div>
+		</div>
+	{{else}}
+		{{#if fetch_image}}
+			<div class="tile__media">
+				<div class="tile__media__plc ddgsi ddgsi-news"></div>
+				{{#if image}}<div class="tile__media__img" style="background-image:url({{imageProxy image}});"></div>{{/if}}
+			</div>
+		{{/if}}
+	{{/if}}
 	<div class="tile__body  has-foot">
 		<h3 class="tile__title  {{#if fetch_image}}tile__title--under-image{{/if}}  js-ellipsis"><a href="{{url}}" title="{{title}}">{{{title}}}</a></h3>
         {{^if fetch_image}}
