@@ -1,7 +1,8 @@
 <div class="detail__inner">
     <div class="detail__media  detail__media--images">
         <span class="detail__media__img-wrapper  js-image-detail-wrapper">
-            <img src="{{imageProxy thumbnail}}" {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} class="detail__media__img-thumbnail  js-detail-img " />
+            <div {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} class="detail__media__img-bg  js-detail-img  js-detail-img-bg"></div>
+            <img src="{{imageProxy thumbnail}}" {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} class="detail__media__img-thumbnail  js-detail-img  js-detail-img-thumb" />
             <img {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} alt="{{title}}" class="detail__media__img-highres  js-detail-img  js-detail-img-high" />
         </span>
     </div>
