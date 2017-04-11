@@ -4,7 +4,7 @@
         {{#if linkImage}}
             <a {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} href="{{image}}" class="detail__media__img-link  js-detail-img  js-image-detail-link" target="_blank">
         {{/if}}
-                <div {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} class="detail__media__img-bg  js-detail-img  js-detail-img-bg"></div>
+                <div style="width:{{detail.transBgWidth}};height:{{detail.transBgHeight}};" class="detail__media__img-bg  js-detail-img  js-detail-img-bg"></div>
                 <img src="{{imageProxy thumbnail}}" {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} class="detail__media__img-thumbnail  js-detail-img  js-detail-img-thumb" />
                 <img {{#if detail.width}}style="width:{{detail.width}};height:{{detail.height}};top:{{detail.top}};"{{/if}} alt="{{title}}" class="detail__media__img-highres  js-detail-img  js-detail-img-high" />
         {{#if linkImage}}
