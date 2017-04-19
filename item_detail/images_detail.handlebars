@@ -16,12 +16,16 @@
         <div class="c-detail  detail__body__content">
             <h5 class="c-detail__title"><a href="{{url}}">{{title}}</a></h5>
             <div class="c-detail__desc">
+                {{#if isMobile}}
+                    <a href="{{image}}" target="_blank" class="c-detail__btn c-detail__btn--right btn js-image-detail-link">DDG.Text.VIEW_FILE</a>
+                {{/if}}
                 <p><a href="{{url}}">{{domain url}}</a></p>
                 <div class="c-detail__filemeta">
                     {{width}} &times; {{height}}
-                    <span class="sep  c-detail__sep"></span>
-                    <a href="{{image}}" target="_blank" class="js-image-detail-link">DDG.Text.VIEW_FILE</a>
                 </div>
+                {{^if isMobile}}
+                    <a href="{{image}}" target="_blank" class="c-detail__btn c-detail__btn--bottom btn js-image-detail-link">DDG.Text.VIEW_FILE</a>
+                {{/if}}
             </div>
         </div>
     </div>
