@@ -26,7 +26,9 @@
 			{{/if}}
 			<span class="news-source">{{ellipsis source 20}}</span>
 		</span>
-		<span class="sep  tile__sep"></span>
-		<span class="tile__time">{{{relative_time}}}</span>
+		{{#if relative_time}}
+			<span class="sep  tile__sep"></span>
+			<span class="tile__time">{{{relative_time}}}</span>
+		{{/if}}
 	</div>
 </div>
