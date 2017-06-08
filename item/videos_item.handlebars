@@ -1,4 +1,4 @@
-<div class="tile  tile--c--w  tile--vid  has-detail  opt--t-xxs" {{#if url}}data-link="{{url}}"{{/if}}>
+<{{#if url}}a href="{{url}}"{{else}}div{{/if}} class="tile  tile--c--w  tile--vid  has-detail  opt--t-xxs">
 	<div class="tile__media">
 		<img src="" data-src="{{imageProxy images.medium}}" alt="{{title}}" class="tile__media__img  js-lazyload" />
 		<span class="tile--vid__dur">{{duration}}</span>
@@ -14,4 +14,4 @@
 			{{{viewCount}}}
 		</span>
 	</div>
-</div>
+</{{#if url}}a{{else}}div{{/if}}>

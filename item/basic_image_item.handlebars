@@ -1,4 +1,4 @@
-<div class="tile  tile--b--i {{#if elClass}}{{elClass}}{{else}}{{#if meta.elClass.tile}}{{meta.elClass.tile}}{{else}}tile--c{{/if}}{{/if}} has-detail  tile--{{meta.id}}  opt--t-xxs" {{#if url}} data-link="{{url}}"{{/if}}>
+<{{#if url}}a href="{{url}}"{{else}}div{{/if}} class="tile  tile--b--i {{#if elClass}}{{elClass}}{{else}}{{#if meta.elClass.tile}}{{meta.elClass.tile}}{{else}}tile--c{{/if}}{{/if}} has-detail  tile--{{meta.id}}  opt--t-xxs">
 	<div class="tile__media {{meta.elClass.tileMedia}}">
 		<img src="{{imageProxy image}}" alt="{{title}}" class="tile__media__img {{meta.elClass.tileMediaImg}}" />
 	</div>
@@ -18,4 +18,4 @@
 		{{/if}}
 		</div>
 	</div>
-</div>
+</{{#if url}}a{{else}}div{{/if}}>
