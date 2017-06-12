@@ -3,7 +3,7 @@
 		{{#if Icon.URL }}
 			<img class="tile__icon" src="{{Icon.URL}}" />
 		{{/if}}
-		{{{formatTitle Result el="h4" className="tile__title" parseFirst="true" ellipsis=100}}}
+		{{{formatTitle Result el="h4" className="tile__title" href="FirstURL" parseFirst="true" ellipsis=100}}}
 		<div class="tile__content  tile__content--sm">{{{ellipsis Result 95 parseFirst="true"}}}</div> {{! Text duplicates the title, using Result }}
 	</div>
 </div>

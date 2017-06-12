@@ -1,7 +1,7 @@
 {{#if icon}}<img src="{{imageProxy icon}}" alt="{{title}}" class="tile__icon" />{{/if}}
 {{#if showPin}}<span class="tile__icon  tile__icon--pin">{{num}}</span>{{/if}}
 <h5 class="tile__title {{#if subtitle}}with-sub{{/if}} {{#if altSubtitle}}has-sub--a{{/if}} {{meta.elClass.tileTitle}} {{titleClass}}">
-	<span class="tile__title__main">{{title}}</span>
+	<{{#if url}}a href="{{url}}"{{else}}span{{/if}} class="tile__title__main">{{title}}</{{#if url}}a{{else}}span{{/if}}>
 	{{#if altSubtitle}}<span class="tile__title__sub {{meta.elClass.tileAltSubtitle}} {{altSubClass}}">{{{formatSubtitle altSubtitle}}}</span>{{/if}}
 </h5>
 {{#if subtitle}}<span class="tile__sub {{meta.elClass.tileSubtitle}} {{subClass}}">{{{formatSubtitle subtitle}}}</span>{{/if}}
