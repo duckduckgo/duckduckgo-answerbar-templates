@@ -1,75 +1,75 @@
 <div class="c-score">
-	<div class="c-score__head">
-		<div class="c-score__head__date">
-			{{#if clock}}
-				<span class="c-score__clock"><span class="c-score__clock__icon ddgsi-clock"></span>{{clock}}</span>
-			{{else}}
-				{{momentDate start_time}}
-			{{/if}}
-		</div>
-		{{#if score}}
-			{{#each score.away.sequence}}
-				<div class="c-score__item  c-score__item--{{type}}">{{number}}</div>
-			{{/each}}
-			{{#if current_count}}<div class="c-score__head__total">Total</div>{{/if}}
-		{{/if}}
-	</div>
-	<div class="c-score__line  c-score__line--vs1">
-		<div class="c-score__line__name">
-			{{#with away_team}}
-			<div class="c-score__team">
-				<div class="c-score__team__logo">
-					{{#if image}}
-						<img class="c-score__team__img" src="{{image}}">
-					{{else}}
-						<span class="c-score__team__logo__ph">u</span>
-					{{/if}}
-				</div>
-				<div class="c-score__team__name">
-					<span class="c-score__team__market">{{location}}</span>
-					<span class="c-score__team__nick">{{name}}</span>
-				</div>
-			</div>
-			{{/with}}
-		</div>
-		{{#if score}}
-			{{#each score.away.sequence}}
-				<div class="c-score__item  c-score__item--{{type}}">{{points}}</div>
-			{{/each}}
-			{{#if current_count}}<div class="c-score__line__total">{{away_total}}</div>{{/if}}
-		{{/if}}
-	</div>
-	<div class="c-score__line  c-score__line--vs2" data-vs="@">
-		<div class="c-score__line__name">
-			{{#with home_team}}
-			<div class="c-score__team">
-				<div class="c-score__team__logo">
-					{{#if image}}
-						<img class="c-score__team__img" src="{{image}}">
-					{{else}}
-						<span class="c-score__team__logo__ph">u</span>
-					{{/if}}
-				</div>
-				<div class="c-score__team__name">
-					<span class="c-score__team__market">{{location}}</span>
-					<span class="c-score__team__nick">{{name}}</span>
-				</div>
-			</div>
-			{{/with}}
-		</div>
-		{{#if score}}
-			{{#each score.home.sequence}}
-				<div class="c-score__item  c-score__item--{{type}}">{{points}}</div>
-			{{/each}}
-			{{#if current_count}}<div class="c-score__line__total">{{home_total}}</div>{{/if}}
-		{{/if}}
-	</div>
-	<div class="c-score__foot">
-		<div class="c-score__foot__main">
-			<div class="c-score__venue">@ {{venue.market}}<span class="c-score__venue__name"> - {{venue.name}}</span></div>
-			<div class="c-score__foot__more  c-score__opt">
-				{{#and updated score.away.sequence}}<span class="c-score__foot__info">Last updated {{momentTime updated}}</span>{{/and}}
-			</div>
-		</div>
-	</div>
+    <div class="c-score__head">
+        <div class="c-score__head__date">
+            {{#if clock}}
+                <span class="c-score__clock"><span class="c-score__clock__icon ddgsi-clock"></span>{{clock}}</span>
+            {{else}}
+                {{momentDate start_time}}
+            {{/if}}
+        </div>
+        {{#if score}}
+            {{#each score.away.sequence}}
+                <div class="c-score__item  c-score__item--{{type}}">{{number}}</div>
+            {{/each}}
+            {{#if current_count}}<div class="c-score__head__total">Total</div>{{/if}}
+        {{/if}}
+    </div>
+    <div class="c-score__line  c-score__line--vs1">
+        <div class="c-score__line__name">
+            {{#with away_team}}
+            <div class="c-score__team">
+                <div class="c-score__team__logo">
+                    {{#if image}}
+                        <img class="c-score__team__img" src="{{image}}">
+                    {{else}}
+                        <span class="c-score__team__logo__ph">u</span>
+                    {{/if}}
+                </div>
+                <div class="c-score__team__name">
+                    <span class="c-score__team__market">{{location}}</span>
+                    <span class="c-score__team__nick">{{name}}</span>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+        {{#if score}}
+            {{#each score.away.sequence}}
+                <div class="c-score__item  c-score__item--{{type}}">{{points}}</div>
+            {{/each}}
+            {{#if current_count}}<div class="c-score__line__total">{{away_total}}</div>{{/if}}
+        {{/if}}
+    </div>
+    <div class="c-score__line  c-score__line--vs2" data-vs="@">
+        <div class="c-score__line__name">
+            {{#with home_team}}
+            <div class="c-score__team">
+                <div class="c-score__team__logo">
+                    {{#if image}}
+                        <img class="c-score__team__img" src="{{image}}">
+                    {{else}}
+                        <span class="c-score__team__logo__ph">u</span>
+                    {{/if}}
+                </div>
+                <div class="c-score__team__name">
+                    <span class="c-score__team__market">{{location}}</span>
+                    <span class="c-score__team__nick">{{name}}</span>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+        {{#if score}}
+            {{#each score.home.sequence}}
+                <div class="c-score__item  c-score__item--{{type}}">{{points}}</div>
+            {{/each}}
+            {{#if current_count}}<div class="c-score__line__total">{{home_total}}</div>{{/if}}
+        {{/if}}
+    </div>
+    <div class="c-score__foot">
+        <div class="c-score__foot__main">
+            <div class="c-score__venue">@ {{venue.market}}<span class="c-score__venue__name"> - {{venue.name}}</span></div>
+            <div class="c-score__foot__more  c-score__opt">
+                {{#and updated score.away.sequence}}<span class="c-score__foot__info">Last updated {{momentTime updated}}</span>{{/and}}
+            </div>
+        </div>
+    </div>
 </div>

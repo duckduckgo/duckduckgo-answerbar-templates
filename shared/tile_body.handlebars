@@ -1,9 +1,9 @@
 <div class="tile__body {{#if footer_content}}has-foot {{#if footLines}}has-foot--{{footLines}}{{/if}}{{/if}}">
-	{{{include 'tile_titles'}}}
-	{{#if description}}
-		{{{include 'tile_snippet'}}}
-	{{/if}}
-	{{#if footer_content}}
-		<div class="tile__foot {{#if footLines}}tile__foot--{{footLines}}{{/if}}">{{{include footer_content}}}</div>
-	{{/if}}
+    {{{include 'tile_titles'}}}
+    {{#if description}}
+        {{{include 'tile_snippet'}}}
+    {{/if}}
+    {{#if footer_content}}
+        <div class="tile__foot {{#if footLines}}tile__foot--{{footLines}}{{/if}}">{{{include footer_content}}}</div>
+    {{/if}}
 </div>
