@@ -1,23 +1,23 @@
 <div class="tile  tile--b--i {{#if elClass}}{{elClass}}{{else}}{{#if meta.elClass.tile}}{{meta.elClass.tile}}{{else}}tile--c{{/if}}{{/if}} has-detail  tile--{{meta.id}}  opt--t-xxs" {{#if url}} data-link="{{url}}"{{/if}}>
-	<div class="tile__media {{meta.elClass.tileMedia}}">
-		<img src="{{imageProxy image}}" alt="{{title}}" class="tile__media__img {{meta.elClass.tileMediaImg}}" />
-	</div>
-	<div class="tile__body  tile__body--b-i {{meta.elClass.tileBody}}">
-		<h6 class="tile__title {{#if description}}tile__title--1 with-sub{{else}}tile__sub--2{{/if}}">
-			{{#if url}}<a href="{{url}}">{{/if}}
-			{{ellipsis title 55}}
-			{{#if url}}</a>{{/if}}
-		</h6>
-		{{#if description}}
-			<p class="tile__sub--2  opt">{{ellipsis description 56}}</p>
+    <div class="tile__media {{meta.elClass.tileMedia}}">
+        <img src="{{imageProxy image}}" alt="{{title}}" class="tile__media__img {{meta.elClass.tileMediaImg}}" />
+    </div>
+    <div class="tile__body  tile__body--b-i {{meta.elClass.tileBody}}">
+        <h6 class="tile__title {{#if description}}tile__title--1 with-sub{{else}}tile__sub--2{{/if}}">
+            {{#if url}}<a href="{{url}}">{{/if}}
+            {{ellipsis title 55}}
+            {{#if url}}</a>{{/if}}
+        </h6>
+        {{#if description}}
+            <p class="tile__sub--2  opt">{{ellipsis description 56}}</p>
         {{/if}}
-		<div class="tile__tx  tile__rating  one-line {{#if meta.elClass.tileRating}}{{meta.elClass.tileRating}}{{else}}tile__rating--right{{/if}}">
-		{{#if meta.options.rating}}
-			{{{starRating rating}}}
-		{{/if}}
-		{{#if meta.options.ratingText}}
-			<span class="tile__source  one-line">{{ellipsis ratingText 19}}</span>
-		{{/if}}
-		</div>
-	</div>
+        <div class="tile__tx  tile__rating  one-line {{#if meta.elClass.tileRating}}{{meta.elClass.tileRating}}{{else}}tile__rating--right{{/if}}">
+        {{#if meta.options.rating}}
+            {{{starRating rating}}}
+        {{/if}}
+        {{#if meta.options.ratingText}}
+            <span class="tile__source  one-line">{{ellipsis ratingText 19}}</span>
+        {{/if}}
+        </div>
+    </div>
 </div>

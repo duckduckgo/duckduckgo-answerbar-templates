@@ -1,29 +1,29 @@
 <div class="tile  tile--pr {{#if elClass}}{{elClass}}{{else}}{{#if meta.elClass.tile}}{{meta.elClass.tile}}{{else}}tile--c{{/if}}{{/if}} has-detail  tile--{{parentId}} {{#if meta.options.rating}} has-rating{{/if}} opt--t-xxs" data-link="{{url}}">
-	<div class="tile__media  tile__media--pr">
-		<img src="" data-src="{{{imageProxy img}}}" alt="{{title}}" class="tile__media__img  js-lazyload" />
-		{{#and showBadge meta.options.badge}}{{{include meta.options.badge}}}{{/and}}
-	</div>
-	<div class="tile__body  tile__body--pr">
+    <div class="tile__media  tile__media--pr">
+        <img src="" data-src="{{{imageProxy img}}}" alt="{{title}}" class="tile__media__img  js-lazyload" />
+        {{#and showBadge meta.options.badge}}{{{include meta.options.badge}}}{{/and}}
+    </div>
+    <div class="tile__body  tile__body--pr">
         {{#if url}}
             {{{formatTitle heading el="h6" className="tile__title" classNameSec="tile__title--pr" href="url" optSub=true ellipsis=100}}}
         {{else}}
             {{{formatTitle heading el="h6" className="tile__title" classNameSec="tile__title--pr" optSub=true ellipsis=100}}}
         {{/if}}
-	<div class="tile__tx  tile--pr__sub  one-line">
-		{{#and meta.options.price price}}
-			<span class="tile--pr__price  price">{{price}}</span>
-		{{/and}}
-		{{#and meta.options.price meta.options.brand price brand}}
-			<span class="sep  tile__sep"></span>
-		{{/and}}
-		{{#and meta.options.brand brand}}
-			<span class="tile--pr__brand">DDG.Text.MADE_BY_BRAND</span>
-		{{/and}}
-	</div>
+    <div class="tile__tx  tile--pr__sub  one-line">
+        {{#and meta.options.price price}}
+            <span class="tile--pr__price  price">{{price}}</span>
+        {{/and}}
+        {{#and meta.options.price meta.options.brand price brand}}
+            <span class="sep  tile__sep"></span>
+        {{/and}}
+        {{#and meta.options.brand brand}}
+            <span class="tile--pr__brand">DDG.Text.MADE_BY_BRAND</span>
+        {{/and}}
+    </div>
         {{#if meta.options.rating}}
-		<div class="tile__tx  tile__rating  one-line">
-			{{{starsAndReviews rating reviewCount url_review true}}}
-		</div>
+        <div class="tile__tx  tile__rating  one-line">
+            {{{starsAndReviews rating reviewCount url_review true}}}
+        </div>
         {{/if}}
-	</div>
+    </div>
 </div>
