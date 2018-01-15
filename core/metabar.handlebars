@@ -14,7 +14,11 @@
             {{#if primaryText}}
                 {{{primaryText}}}
             {{else}}
-                <span class="metabar__item-type">{{l itemType}}</span> DDG.Text.FOR <span class="metabar__term">{{searchTerm}}</span>
+                {{#if sourceNoTransform}}
+                    <span class="metabar__item-type--no-transform">{{l itemType}}</span> DDG.Text.FOR <span class="metabar__term">{{searchTerm}}</span>
+                {{else}}
+                    <span class="metabar__item-type">{{l itemType}}</span> DDG.Text.FOR <span class="metabar__term">{{searchTerm}}</span>
+                {{/if}}
             {{/if}}
         </div>
         {{#if showDropdowns}}
