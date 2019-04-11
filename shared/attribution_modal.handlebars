@@ -5,8 +5,8 @@
             <div class="modal__body">
                 <div class="attribution">
                     <p class="tx-clr--slate">DDG.Text.ATTRIBUTION_STRING</p>
-                    <hr class="attribution__hr"/>
                     {{#if devs}}
+                        <hr class="attribution__hr"/>
                         {{#each devs}}
                             {{#if this.show}}
                                 <div class="tx-clr--slate-light">DDG.Text.ATTRIBUTION_DEV: <a href="{{this.url}}" class="tx-clr--slate">{{this.name}}</a></div>
